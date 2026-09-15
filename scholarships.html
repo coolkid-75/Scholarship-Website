@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scholarships | Pea Ridge Scholarship Hub</title>
+
+    <style>
+        :root {
+            --black: #090909;
+            --dark-black: #111111;
+            --red: #b5121b;
+            --bright-red: #d71920;
+            --white: #ffffff;
+            --off-white: #f5f5f5;
+            --gray: #d9d9d9;
+            --dark-gray: #242424;
+            --gold: #d4af37;
+            --light-gold: #f3d675;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--black);
+            color: var(--white);
+            min-height: 100vh;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: var(--dark-black);
+            border-bottom: 3px solid var(--red);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: auto;
+            padding: 18px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .logo-area img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text strong {
+            font-size: 21px;
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            font-size: 11px;
+            color: var(--gold);
+            letter-spacing: 2px;
+            margin-top: 3px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 10px 16px;
+            border-radius: 4px;
+            transition: 0.2s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: var(--red);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background:
+                linear-gradient(
+                    rgba(9, 9, 9, 0.88),
+                    rgba(9, 9, 9, 0.95)
+                ),
+                radial-gradient(
+                    circle at center,
+                    #2b0b0e 0%,
+                    #090909 65%
+                );
+
+            padding: 80px 30px 70px;
+            text-align: center;
+            border-bottom: 1px solid var(--dark-gray);
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 6vw, 72px);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: var(--red);
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            color: var(--gray);
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        main {
+            max-width: 1400px;
+            margin: auto;
+            padding: 50px 30px 80px;
+        }
+
+        /* =========================
+           CONTROLS
+        ========================= */
+
+        .controls {
+            background: var(--dark-black);
+            border: 1px solid var(--dark-gray);
+            border-left: 4px solid var(--red);
+            padding: 22px;
+            margin-bottom: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 260px;
+        }
+
+        .search-box input {
+            width: 100%;
+            background: var(--black);
+            border: 1px solid var(--dark-gray);
+            color: var(--white);
+            padding: 14px 16px;
+            border-radius: 4px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .search-box input:focus {
+            border-color: var(--red);
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .filter-btn {
+            background: var(--black);
+            color: var(--white);
+            border: 1px solid var(--dark-gray);
+            padding: 12px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--red);
+            border-color: var(--red);
+        }
+
+        .result-count {
+            width: 100%;
+            color: var(--gray);
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .result-count strong {
+            color: var(--gold);
+        }
+
+        /* =========================
+           SCHOLARSHIP GRID
+        ========================= */
+
+        .scholarship-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .scholarship-card {
+            display: block;
+            text-decoration: none;
+            color: var(--white);
+            background: var(--dark-black);
+            border: 1px solid var(--dark-gray);
+            border-top: 4px solid var(--red);
+            padding: 26px;
+            min-height: 320px;
+            position: relative;
+            overflow: hidden;
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .scholarship-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(181, 18, 27, 0.08),
+                transparent 45%
+            );
+            pointer-events: none;
+        }
+
+        .scholarship-card:hover {
+            transform: translateY(-7px);
+            border-color: var(--red);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+        }
+
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 18px;
+        }
+
+        .deadline-badge {
+            background: var(--red);
+            color: var(--white);
+            font-size: 12px;
+            font-weight: bold;
+            padding: 7px 10px;
+            border-radius: 3px;
+            white-space: nowrap;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .scholarship-card h2 {
+            font-size: 21px;
+            line-height: 1.25;
+            margin-bottom: 15px;
+        }
+
+        .amount {
+            color: var(--gold);
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .amount.large {
+            font-size: 30px;
+        }
+
+        .description {
+            color: var(--gray);
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .eligibility {
+            border-top: 1px solid var(--dark-gray);
+            padding-top: 15px;
+            color: var(--off-white);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .eligibility strong {
+            color: var(--gold);
+        }
+
+        .card-footer {
+            margin-top: 20px;
+            color: var(--red);
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--gray);
+            background: var(--dark-black);
+            border: 1px solid var(--dark-gray);
+        }
+
+        .no-results h2 {
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: var(--dark-black);
+            border-top: 3px solid var(--red);
+            padding: 35px 30px;
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        footer strong {
+            color: var(--white);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+            .scholarship-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nav-container {
+                flex-direction: column;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .hero {
+                padding: 60px 20px;
+            }
+
+            main {
+                padding: 35px 20px 60px;
+            }
+
+            .scholarship-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .controls {
+                padding: 18px;
+            }
+
+            .filter-buttons {
+                width: 100%;
+            }
+
+            .filter-btn {
+                flex: 1;
+            }
+
+            .logo-area {
+                text-align: center;
+            }
+
+            .nav-container {
+                padding: 15px;
+            }
+
+            nav a {
+                padding: 8px 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+        <div class="nav-container">
+
+            <a href="index.html" class="logo-area">
+                <img src="images/blackhawk-logo.png" alt="Pea Ridge Blackhawks">
+
+                <div class="logo-text">
+                    <strong>PEA RIDGE</strong>
+                    <span>SCHOLARSHIP HUB</span>
+                </div>
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="scholarships.html" class="active">Scholarships</a>
+                <a href="tips.html">Tips</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <h1>
+            Find Your <span>Scholarships</span>
+        </h1>
+
+        <p>
+            Explore scholarship opportunities available to Pea Ridge
+            students and find funding to help make your college goals
+            a reality.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main>
+
+        <!-- CONTROLS -->
+
+        <section class="controls">
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search scholarships..."
+                    autocomplete="off"
+                >
+            </div>
+
+            <div class="filter-buttons">
+
+                <button
+                    class="filter-btn active"
+                    data-filter="all"
+                >
+                    All
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="large"
+                >
+                    $10,000+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="medium"
+                >
+                    $5,000+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="small"
+                >
+                    Under $5,000
+                </button>
+
+            </div>
+
+            <div class="result-count">
+                Showing <strong id="resultCount">0</strong> scholarships
+            </div>
+
+        </section>
+
+
+        <!-- SCHOLARSHIP GRID -->
+
+        <section
+            class="scholarship-grid"
+            id="scholarshipGrid"
+        >
+            <div class="no-results">
+                Loading scholarships...
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+        <p>
+            © 2026 <strong>Pea Ridge Scholarship Hub</strong>
+        </p>
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        let allScholarships = [];
+        let currentFilter = "all";
+
+
+        // ==========================================
+        // ELEMENTS
+        // ==========================================
+
+        const scholarshipGrid =
+            document.getElementById("scholarshipGrid");
+
+        const searchInput =
+            document.getElementById("searchInput");
+
+        const resultCount =
+            document.getElementById("resultCount");
+
+        const filterButtons =
+            document.querySelectorAll(".filter-btn");
+
+
+        // ==========================================
+        // LOAD JSON
+        // ==========================================
+
+        fetch("data/scholarships.json")
+
+            .then(response => {
+
+                if (!response.ok) {
+                    throw new Error(
+                        "Could not load scholarship data."
+                    );
+                }
+
+                return response.json();
+            })
+
+            .then(scholarships => {
+
+                allScholarships = scholarships;
+
+                renderScholarships();
+
+            })
+
+            .catch(error => {
+
+                console.error(error);
+
+                scholarshipGrid.innerHTML = `
+                    <div class="no-results">
+                        <h2>Unable to Load Scholarships</h2>
+                        <p>
+                            Please make sure the website is being
+                            opened through a local web server.
+                        </p>
+                    </div>
+                `;
+
+                resultCount.textContent = "0";
+            });
+
+
+        // ==========================================
+        // CREATE SCHOLARSHIP CARD
+        // ==========================================
+
+        function createScholarshipCard(scholarship) {
+
+            const card = document.createElement("a");
+
+            card.className = "scholarship-card";
+
+            card.href =
+                "scholarships/" + scholarship.page;
+
+            card.target = "_blank";
+
+            card.rel = "noopener";
+
+
+            // Large scholarship styling
+
+            const amountClass =
+                scholarship.amountValue >= 10000
+                    ? "amount large"
+                    : "amount";
+
+
+            card.innerHTML = `
+
+                <div class="card-top">
+
+                    <div>
+                        <h2>
+                            ${escapeHTML(scholarship.name)}
+                        </h2>
+                    </div>
+
+                    <div class="deadline-badge">
+                        ${escapeHTML(scholarship.badge)}
+                    </div>
+
+                </div>
+
+
+                <div class="${amountClass}">
+                    ${escapeHTML(scholarship.amount)}
+                </div>
+
+
+                <div class="description">
+                    ${escapeHTML(scholarship.description)}
+                </div>
+
+
+                <div class="eligibility">
+
+                    <strong>Eligibility:</strong>
+
+                    ${escapeHTML(scholarship.eligibility)}
+
+                </div>
+
+
+                <div class="card-footer">
+                    View Scholarship →
+                </div>
+
+            `;
+
+            return card;
+        }
+
+
+        // ==========================================
+        // RENDER SCHOLARSHIPS
+        // ==========================================
+
+        function renderScholarships() {
+
+            const searchTerm =
+                searchInput.value
+                    .trim()
+                    .toLowerCase();
+
+
+            // Clear current cards
+
+            scholarshipGrid.innerHTML = "";
+
+
+            // Filter scholarships
+
+            const filteredScholarships =
+                allScholarships.filter(scholarship => {
+
+                    const searchableText = `
+                        ${scholarship.name}
+                        ${scholarship.amount}
+                        ${scholarship.deadline}
+                        ${scholarship.description}
+                        ${scholarship.eligibility}
+                        ${scholarship.search}
+                    `.toLowerCase();
+
+
+                    const matchesSearch =
+                        searchableText.includes(searchTerm);
+
+
+                    let matchesAmount = true;
+
+
+                    if (currentFilter === "large") {
+
+                        matchesAmount =
+                            scholarship.amountValue >= 10000;
+
+                    }
+
+                    else if (currentFilter === "medium") {
+
+                        matchesAmount =
+                            scholarship.amountValue >= 5000;
+
+                    }
+
+                    else if (currentFilter === "small") {
+
+                        matchesAmount =
+                            scholarship.amountValue > 0 &&
+                            scholarship.amountValue < 5000;
+
+                    }
+
+
+                    return matchesSearch && matchesAmount;
+
+                });
+
+
+            // Update count
+
+            resultCount.textContent =
+                filteredScholarships.length;
+
+
+            // No results
+
+            if (filteredScholarships.length === 0) {
+
+                scholarshipGrid.innerHTML = `
+
+                    <div class="no-results">
+
+                        <h2>
+                            No Scholarships Found
+                        </h2>
+
+                        <p>
+                            Try changing your search or filter.
+                        </p>
+
+                    </div>
+
+                `;
+
+                return;
+            }
+
+
+            // Add cards
+
+            filteredScholarships.forEach(
+                scholarship => {
+
+                    scholarshipGrid.appendChild(
+                        createScholarshipCard(scholarship)
+                    );
+
+                }
+            );
+
+        }
+
+
+        // ==========================================
+        // SEARCH
+        // ==========================================
+
+        searchInput.addEventListener(
+            "input",
+            renderScholarships
+        );
+
+
+        // ==========================================
+        // FILTER BUTTONS
+        // ==========================================
+
+        filterButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                filterButtons.forEach(btn => {
+
+                    btn.classList.remove("active");
+
+                });
+
+
+                button.classList.add("active");
+
+
+                currentFilter =
+                    button.dataset.filter;
+
+
+                renderScholarships();
+
+            });
+
+        });
+
+
+        // ==========================================
+        // BASIC HTML ESCAPING
+        // ==========================================
+
+        function escapeHTML(value) {
+
+            return String(value)
+
+                .replace(/&/g, "&amp;")
+
+                .replace(/</g, "&lt;")
+
+                .replace(/>/g, "&gt;")
+
+                .replace(/"/g, "&quot;")
+
+                .replace(/'/g, "&#039;");
+        }
+
+    </script>
+
+</body>
+</html>
