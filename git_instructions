@@ -1,0 +1,11 @@
+[Update git Repo]
+git add .
+git commit -m "comment here"
+git push
+
+
+[Update server Repo from git]
+git pull
+
+[Website Development git-URL]
+https://coolkid-75.github.io/Scholarship-Website/
