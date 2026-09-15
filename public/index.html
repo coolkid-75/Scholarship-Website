@@ -77,15 +77,9 @@
             educational goals.
         </p>
         
-        <div class="hero-badge">
-            Enrolled
-        </div>
-                <div class="hero-badge">
-            Enlisted
-        </div>
-                <div class="hero-badge">
-            Employed
-        </div>
+        <div class="hero-badge">Enrolled</div>
+        <div class="hero-badge">Enlisted</div>
+        <div class="hero-badge">Employed</div>
 
         <div class="hero-buttons">
 
@@ -136,241 +130,11 @@
         </div>
 
 
-        <div class="scholarship-grid">
-
-
-            <!-- ================= CARD 1 ================= -->
-
-            <a
-                href="scholarships/scholarshipowl.html"
-                class="scholarship-card featured-gold"
-            >
-
-                <div class="card-top">
-
-                    <span class="amount gold-amount">
-                        $50,000
-                    </span>
-
-                    <span class="deadline">
-                        Jan 29, 2026
-                    </span>
-
-                </div>
-
-
-                <div class="card-icon">
-                    🦉
-                </div>
-
-
-                <span class="big-award">
-                    ★ BIG AWARD
-                </span>
-
-
-                <h3>
-                    ScholarshipOwl No Essay Scholarship
-                </h3>
-
-
-                <p>
-                    Large no-essay scholarship available to students
-                    who complete a ScholarshipOwl profile.
-                </p>
-
-
-                <!-- HOVER POPUP -->
-
-                <div class="scholarship-popup gold-popup">
-
-                    <span class="popup-label">
-                        BIG SCHOLARSHIP
-                    </span>
-
-                    <h4>
-                        $50,000 Award
-                    </h4>
-
-                    <p>
-                        Students can enter by completing a
-                        ScholarshipOwl profile and meeting the
-                        scholarship requirements.
-                    </p>
-
-                    <div class="popup-info">
-
-                        <span>✍️ No Essay</span>
-
-                        <span>💰 $50,000</span>
-
-                    </div>
-
-                </div>
-
-
-                <span class="scholarship-link">
-                    View Scholarship
-                    <span>→</span>
-                </span>
-
-            </a>
-
-
-
-            <!-- ================= CARD 2 ================= -->
-
-            <a
-                href="scholarships/be-bold.html"
-                class="scholarship-card featured-gold"
-            >
-
-                <div class="card-top">
-
-                    <span class="amount gold-amount">
-                        $25,000
-                    </span>
-
-                    <span class="deadline">
-                        Jan 31, 2026
-                    </span>
-
-                </div>
-
-
-                <div class="card-icon">
-                    🔥
-                </div>
-
-
-                <span class="big-award">
-                    ★ BIG AWARD
-                </span>
-
-
-                <h3>
-                    Be Bold Scholarship
-                </h3>
-
-
-                <p>
-                    A no-essay scholarship awarded to the applicant
-                    with the boldest profile.
-                </p>
-
-
-                <div class="scholarship-popup gold-popup">
-
-                    <span class="popup-label">
-                        BIG SCHOLARSHIP
-                    </span>
-
-                    <h4>
-                        $25,000 Award
-                    </h4>
-
-                    <p>
-                        Create a profile showcasing your
-                        accomplishments, goals, personality,
-                        and ambitions.
-                    </p>
-
-                    <div class="popup-info">
-
-                        <span>✍️ No Essay</span>
-
-                        <span>💰 $25,000</span>
-
-                    </div>
-
-                </div>
-
-
-                <span class="scholarship-link">
-                    View Scholarship
-                    <span>→</span>
-                </span>
-
-            </a>
-
-
-
-            <!-- ================= CARD 3 ================= -->
-
-            <a
-                href="scholarships/constitution.html"
-                class="scholarship-card featured-gold"
-            >
-
-                <div class="card-top">
-
-                    <span class="amount gold-amount">
-                        $10,000
-                    </span>
-
-                    <span class="deadline">
-                        Jan 31, 2026
-                    </span>
-
-                </div>
-
-
-                <div class="card-icon">
-                    📜
-                </div>
-
-
-                <span class="big-award">
-                    ★ BIG AWARD
-                </span>
-
-
-                <h3>
-                    The Constitution Scholarship
-                </h3>
-
-
-                <p>
-                    Awards students for completing U.S. Constitution
-                    educational courses and certificates.
-                </p>
-
-
-                <div class="scholarship-popup gold-popup">
-
-                    <span class="popup-label">
-                        BIG SCHOLARSHIP
-                    </span>
-
-                    <h4>
-                        $10,000 Award
-                    </h4>
-
-                    <p>
-                        Students qualify by completing the required
-                        Constitution-related educational courses
-                        and certificates.
-                    </p>
-
-                    <div class="popup-info">
-
-                        <span>🇺🇸 History</span>
-
-                        <span>💰 $10,000</span>
-
-                    </div>
-
-                </div>
-
-
-                <span class="scholarship-link">
-                    View Scholarship
-                    <span>→</span>
-                </span>
-
-            </a>
-
-
+        <!-- ADDED ID HERE FOR JAVASCRIPT TARGETING -->
+        <div class="scholarship-grid" id="bigRewardsGrid">
+            <div class="no-results" style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--gray);">
+                Loading big reward scholarships...
+            </div>
         </div>
 
 
@@ -523,291 +287,95 @@
 
             </a>
 
+        </div>
 
-            <a
-                href="https://appily.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="resource-card"
-            >
+    </div>
 
-                <span>🚀</span>
+</section>
 
-                <div>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+    const bigRewardsGrid = document.getElementById("bigRewardsGrid");
+
+    fetch("data/scholarships.json")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Could not load scholarship data.");
+            }
+            return response.json();
+        })
+        .then(scholarships => {
+            // Filter only scholarships with amountValue >= 10000
+            const bigRewards = scholarships.filter(s => s.amountValue >= 10000);
+
+            bigRewardsGrid.innerHTML = "";
+
+            if (bigRewards.length === 0) {
+                bigRewardsGrid.innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--gray);">
+                        <p>No big reward scholarships available at this time.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Render up to the first 3 or all of them depending on your layout design
+            bigRewards.forEach(scholarship => {
+                const card = document.createElement("a");
+                card.className = "scholarship-card featured-gold";
+                card.href = "scholarships/" + scholarship.page;
+
+                card.innerHTML = `
+                    <div class="card-top">
+                        <span class="amount gold-amount">
+                            ${escapeHTML(scholarship.amount)}
+                        </span>
+                        <span class="deadline">
+                            ${escapeHTML(scholarship.badge || scholarship.deadline)}
+                        </span>
+                    </div>
+
+                    <span class="big-award">
+                        ★ BIG AWARD
+                    </span>
 
                     <h3>
-                        Appily
+                        ${escapeHTML(scholarship.name)}
                     </h3>
 
                     <p>
-                        Explore colleges, scholarships, and academic paths.
+                        ${escapeHTML(scholarship.description)}
                     </p>
 
+                    <span class="scholarship-link">
+                        View Scholarship
+                        <span>→</span>
+                    </span>
+                `;
+
+                bigRewardsGrid.appendChild(card);
+            });
+        })
+        .catch(error => {
+            console.error(error);
+            bigRewardsGrid.innerHTML = `
+                <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--gray);">
+                    <p>Unable to load featured scholarships.</p>
                 </div>
-
-                <strong>→</strong>
-
-            </a>
-
-
-            <a
-                href="https://bigfuture.collegeboard.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="resource-card"
-            >
-
-                <span>📚</span>
-
-                <div>
-
-                    <h3>
-                        BigFuture
-                    </h3>
-
-                    <p>
-                        College planning and scholarship resources.
-                    </p>
-
-                </div>
-
-                <strong>→</strong>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= TIPS ================= -->
-
-<section class="tips-section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <div>
-
-                <span class="section-label">
-                    SUCCESS GUIDE
-                </span>
-
-                <h2>
-                    Scholarship Success Tips
-                </h2>
-
-            </div>
-
-            <a
-                href="tips.html"
-                class="view-all"
-            >
-                More Tips →
-            </a>
-
-        </div>
-
-
-        <div class="tips-grid">
-
-
-            <div class="tip-card">
-
-                <span class="tip-number">
-                    01
-                </span>
-
-                <div class="tip-icon">
-                    🎯
-                </div>
-
-                <h3>
-                    Start Early
-                </h3>
-
-                <p>
-                    Begin your scholarship search well before
-                    you need the funding.
-                </p>
-
-            </div>
-
-
-            <div class="tip-card">
-
-                <span class="tip-number">
-                    02
-                </span>
-
-                <div class="tip-icon">
-                    📝
-                </div>
-
-                <h3>
-                    Perfect Your Essays
-                </h3>
-
-                <p>
-                    Tell your personal story and have others
-                    review your essays.
-                </p>
-
-            </div>
-
-
-            <div class="tip-card">
-
-                <span class="tip-number">
-                    03
-                </span>
-
-                <div class="tip-icon">
-                    🎓
-                </div>
-
-                <h3>
-                    Keep Grades Strong
-                </h3>
-
-                <p>
-                    A strong GPA can help you qualify for
-                    additional scholarship opportunities.
-                </p>
-
-            </div>
-
-
-            <div class="tip-card">
-
-                <span class="tip-number">
-                    04
-                </span>
-
-                <div class="tip-icon">
-                    🤝
-                </div>
-
-                <h3>
-                    Get Involved
-                </h3>
-
-                <p>
-                    Leadership, volunteering, and activities
-                    can strengthen your applications.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-
-<section class="contact-section">
-
-    <div class="container contact-box">
-
-        <div>
-
-            <span class="section-label">
-                NEED HELP?
-            </span>
-
-            <h2>
-                Have questions about scholarships?
-            </h2>
-
-            <p>
-                Reach out to your Pea Ridge High School counselor
-                for help finding opportunities and completing applications.
-            </p>
-
-        </div>
-
-
-        <a
-            href="contact.html"
-            class="cta-button"
-        >
-            Contact Us →
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <div class="container footer-content">
-
-        <div class="footer-brand">
-
-            <img
-                src="images/blackhawk-logo.png"
-                alt="Pea Ridge Blackhawks Logo"
-            >
-
-            <div>
-
-                <div class="footer-logo">
-                    Pea Ridge Scholarship Hub
-                </div>
-
-                <p>
-                    Helping Blackhawks discover opportunities
-                    for their future.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="scholarships.html">
-                Scholarships
-            </a>
-
-            <a href="tips.html">
-                Tips
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="container copyright">
-
-        <p>
-            © 2026 Pea Ridge Scholarship Hub.
-            All rights reserved.
-        </p>
-
-    </div>
-
-</footer>
-
+            `;
+        });
+
+    function escapeHTML(value) {
+        return String(value)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+</script>
 
 </body>
 </html>
