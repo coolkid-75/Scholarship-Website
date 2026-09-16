@@ -29,7 +29,7 @@
     "badge": "Sep 29",
     "description": "The Owl Scholarship is a source of relief from the dreaded application process. We put students on the fast-track to success by providing direct access to the scholarships they need the most. Take the hassle out of financial aid and maximize your chance at a free ride in college.",
     "eligibility": "1. Student must be a resident of the United States. 2. Student Must be 16 years or older. 3. Student must either be enrolled in a college or university or registered in a qualified high school. 4. Student must be located within the United States.",
-    "search": "Owl 50000",
+    "search": "Owl $50000",
     "page": "owl-scholarship.html"
   },
   {
@@ -40,7 +40,7 @@
     "badge": "Oct 15",
     "description": "The Niche $40,000 Scholarship is a no-essay scholarship focused on education, not finances. The winner will be selected by random drawing and will be notified via email by Votigo, our official scholarship fulfillment partner, by November 15th.",
     "eligibility": "1. Must be a high school or college sudent looking to attend a college or graduate school in the next year.",
-    "search": "Niche 40000",
+    "search": "Niche $40000",
     "page": "niche-40000-scholarship.html"
   },
   {
@@ -51,7 +51,7 @@
     "badge": "Sep 30",
     "description": "The Scholarships360 \"No-Essay\" Scholarship is open to all students who want some extra help paying for their education. Whether you are a high school student who hopes to go to college, a graduate student whos in a masters program, or an adult learner who wants to return to school, you are eligible.",
     "eligibility": "1. Open to all students",
-    "search": "Scholarships360 no-essay 10000 all-students",
+    "search": "Scholarships360 no-essay $10000 all-students",
     "page": "scholarships360-no-essay-scholarship.html"
   }
 ]

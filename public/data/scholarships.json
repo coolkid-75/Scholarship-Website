@@ -1,7 +1,7 @@
 [
   {
     "name": "No Essay Scholarship by Sallie",
-    "amount": "$2,000",
+    "amount": "$2,000 [12 Awards]",
     "amountValue": 2000,
     "deadline": "September 30, 2026",
     "badge": "Sep 30",
@@ -12,7 +12,7 @@
   },
   {
     "name": "Be Bold Scholarship",
-    "amount": "$25,000",
+    "amount": "$25,000 [1 Award]",
     "amountValue": 25000,
     "deadline": "September 30, 2026",
     "badge": "Sep 30",
@@ -23,7 +23,7 @@
   },
   {
     "name": "Owl Scholarship",
-    "amount": "$50,000",
+    "amount": "$50,000 [50 Awards]",
     "amountValue": 50000,
     "deadline": "September 29, 2026",
     "badge": "Sep 29",
@@ -34,7 +34,7 @@
   },
   {
     "name": "Niche $40,000 Scholarship",
-    "amount": "$40,000",
+    "amount": "$40,000 [1 Award]",
     "amountValue": 40000,
     "deadline": "October 15, 2026",
     "badge": "Oct 15",
@@ -45,7 +45,7 @@
   },
   {
     "name": "Scholarships360 \"No Essay\" Scholarship",
-    "amount": "$10,000",
+    "amount": "$10,000 [1 Award]",
     "amountValue": 10000,
     "deadline": "September 30, 2026",
     "badge": "Sep 30",
@@ -53,5 +53,104 @@
     "eligibility": "1. Open to all students",
     "search": "Scholarships360 no-essay $10000 all-students",
     "page": "scholarships360-no-essay-scholarship.html"
+  },
+  {
+    "name": "CollegeXpress Autumn Award",
+    "amount": "$2500 [1 Award]",
+    "amountValue": 2500,
+    "deadline": "September 30, 2026",
+    "badge": "Sep 30",
+    "description": "Since 1995, our mission has been to help connect students with the right schools for them. Every year, thousands of students across the United States and around the world discover their colleges using our websites, magazines, and services.",
+    "eligibility": "1. Student must be 13 years of age or older and a legal resident of the United States. 2. Student must be currently attending high school, college, vocational, or any other accredited post-secondary institution. 3. Employees/officers/directors of Carnegie Dartlet entities and family/household members are NOT eligible.",
+    "search": "CollegeXpress Autumn Award $2500",
+    "page": "collegexpress-autumn-award.html"
+  },
+  {
+    "name": "Appily Easy Money Scholarship",
+    "amount": "$1,000 [12 Awards]",
+    "amountValue": 1000,
+    "deadline": "September 30, 2026",
+    "badge": "Sep 30",
+    "description": "This scholarship is open to high school sophomores, juniors, and first semester senior students for all majors and schools. We will judge this scholarship based on other criteria such as volunteer work, extracurricular activities, special circumstances, etc.",
+    "eligibility": "1. Student must be a sophomore, junior, or first semester senior in high school.",
+    "search": "Appily Easy Money Scholarship $1000 sophomore junior senior",
+    "page": "appily-easy-money-scholarship.html"
+  },
+  {
+    "name": "The Future is Now Scholarship",
+    "amount": "$2,999 [1 Award]",
+    "amountValue": 2999,
+    "deadline": "September 28, 2026",
+    "badge": "Sep 28",
+    "description": "The Future is Now Scholarship offers support for young individuals ages 16 and older, enrolled in college and residing in the United States or in India.",
+    "eligibility": "1. Student must be a resident of the US or India. 2. Student must be 16 years of age or older. 3. Student must be enrolled or planning to enroll in a college. 4. Automatic disqualification may occur for multiple applications.",
+    "search": "The Future is Now Scholarship $2999",
+    "page": "the-future-is-now-scholarship.html"
+  },
+  {
+    "name": "Young Women in STEM Scholarship",
+    "amount": "$5,000 [3 Awards]",
+    "amountValue": 5000,
+    "deadline": "November 1, 2026",
+    "badge": "Nov 1",
+    "description": "The Young Women in STEM Scholarship looks to encourage the future generation of women in STEM fields, especially those coming from low-income backgrounds.",
+    "eligibility": "1. Student must be female. 2. Student must be a high school senior or an undergraduate student. 3. Student must be pursuing a degree in STEM.",
+    "search": "Young Women in STEM Scholarship $5000 senior undergraduate",
+    "page": "young-women-in-stem-scholarship.html"
+  },
+  {
+    "name": "10 Words or Less Scholarship",
+    "amount": "$1,500 [2 Awards]",
+    "amountValue": 1500,
+    "deadline": "November 15, 2026",
+    "badge": "Nov 15",
+    "description": "The 10 Words or Less Scholarship is for studnets who can best explain in 10 words or less why they deserve the scholarship. The 2 best responses will receive the scholarship.",
+    "eligibility": "1. Student must be between the ages of 17-25. 2. Student must be attending a college or univeristy in the Fall of 2027. 3. Student must be attending a college or university in the United States or Canada.",
+    "search": "10 Words or Less Scholarship $1500",
+    "page": "10-words-or-less-scholarship.html"
+  },
+  {
+    "name": "Common App Scholarship",
+    "amount": "$2,000 [3 Awards]",
+    "amountValue": 2000,
+    "deadline": "December 15, 2026",
+    "badge": "Dec 15",
+    "description": "The Common App Scholarship is here to encourage students to spend more time preparing for the Common App, we created an annual scholarship to reward students.",
+    "eligibility": "1. Student must be a junior or senior in high school. 2. Student must be attending a college or university no later than October 1, 2027. 3. Student must have achieved a GPA of 2.5 or greater during their last academic year. 4. Student must answer one of the essay prompts.",
+    "search": "Common App Scholarship $2000",
+    "page": "common-app-scholarship.html"
+  },
+  {
+    "name": "Faith Based College Scholarship",
+    "amount": "$2,000 [1 Award]",
+    "amountValue": 2000,
+    "deadline": "September 30, 2026",
+    "badge": "Sep 30",
+    "description": "The Christian Connector offers various scholarship drawings for Christian/Faith Based colleges and universities. All of the information services provided by The Christian Connector are offered absolutely free!",
+    "eligibility": "1. Student must be in the high school graduating class of 2026, 2027, 2028, or 2029. 2. Student must be interested in attending a Christian/Faith Based university or College.",
+    "search": "Faith Based College Scholarship $2000 Christian freshman sophomore junior senior",
+    "page": "faith-based-college-scholarship"
+  },
+  {
+    "name": "Science Buddy Scholarship",
+    "amount": "$2,750 [5 Awards]",
+    "amountValue": 2750,
+    "deadline": "December 31, 2026",
+    "badge": "Dec 31",
+    "description": "The Science Buddy Scholarship is an essay-based scholarship that awards based on responses to the following essay prompt: \"As a current or future science student, tell us in under 500 words what made you choose to study science in college/university.\"",
+    "eligibility": "1. Student must be entering, or currently pursuing, an educational program in the sciences. 2. Student must be attending a college or University no later than September 15, 2027. 3. Student must have achieved a GPA of 2.5 or greater during their last academic year. 4. Students must answer the essay prompt.",
+    "search": "Science Buddy Scholarship $2750 essay-based",
+    "page": "science-buddy-scholarship.html"
+  },
+  {
+    "name": "US Senate Youth Program Scholarship",
+    "amount": "$10,000 [100 Awards]",
+    "amountValue": 10000,
+    "deadline": "AR est. October 8, 2026",
+    "badge": "Deadline Varies by State",
+    "description": "The US Senate Youth Program Scholarship awards 100 student delegates selected by state education officials.",
+    "eligibility": "1. Student must be a high school junior or senior. 2. Student must hold a qualifying elected or appointed leadership position for the entire 2026-2027 academic year. 3. Student must demonstrate leadership through representing constituency and serving others. 4. Student must be enrolled in United States high schoola dn be a legal permanent resident of the United States. *See scholarship page to view all eligibility requirements.",
+    "search": "US Senate Youth Program Scholarship $10000 leadership",
+    "page": "us-senate-youth-program-scholarship.html"
   }
 ]
