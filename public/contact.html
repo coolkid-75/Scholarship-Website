@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Pea Ridge Scholarship Hub</title>
+
+    <style>
+        :root {
+            --black: #090909;
+            --dark-black: #111111;
+            --red: #b5121b;
+            --bright-red: #d71920;
+            --white: #ffffff;
+            --off-white: #f5f5f5;
+            --gray: #d9d9d9;
+            --dark-gray: #242424;
+            --gold: #d4af37;
+            --light-gold: #f3d675;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--black);
+            color: var(--white);
+            min-height: 100vh;
+        }
+
+        /* =========================
+            HEADER
+        ========================= */
+
+        header {
+            background: var(--dark-black);
+            border-bottom: 3px solid var(--red);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: auto;
+            padding: 18px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .logo-area img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text strong {
+            font-size: 21px;
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            font-size: 11px;
+            color: var(--gold);
+            letter-spacing: 2px;
+            margin-top: 3px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 10px 16px;
+            border-radius: 4px;
+            transition: 0.2s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: var(--red);
+        }
+
+        /* =========================
+            HERO
+        ========================= */
+
+        .hero {
+            background:
+                linear-gradient(
+                    rgba(9, 9, 9, 0.88),
+                    rgba(9, 9, 9, 0.95)
+                ),
+                radial-gradient(
+                    circle at center,
+                    #2b0b0e 0%,
+                    #090909 65%
+                );
+
+            padding: 80px 30px 70px;
+            text-align: center;
+            border-bottom: 1px solid var(--dark-gray);
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 6vw, 72px);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: var(--red);
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            color: var(--gray);
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+            MAIN CONTENT
+        ========================= */
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px 30px 90px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title span {
+            color: var(--gold);
+        }
+
+        .tips-section {
+            margin-bottom: 60px;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .tip-card {
+            background: var(--dark-black);
+            border: 1px solid var(--dark-gray);
+            border-top: 4px solid var(--red);
+            padding: 30px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+        }
+
+        .tip-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .tip-card h3 span {
+            color: var(--gold);
+            font-size: 24px;
+        }
+
+        .contact-role {
+            color: var(--gold);
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .tip-card p {
+            color: var(--gray);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 15px;
+            margin-top: auto;
+        }
+
+        .contact-details p {
+            font-size: 14px;
+            color: var(--gray);
+            margin-bottom: 6px;
+        }
+
+        .contact-details a {
+            color: var(--white);
+            text-decoration: underline;
+        }
+
+        .contact-details a:hover {
+            color: var(--gold);
+        }
+
+        /* =========================
+            FOOTER
+        ========================= */
+
+        footer {
+            background: var(--dark-black);
+            border-top: 3px solid var(--red);
+            padding: 35px 30px;
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        footer strong {
+            color: var(--white);
+        }
+
+        /* =========================
+            RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                flex-direction: column;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .hero {
+                padding: 60px 20px;
+            }
+
+            main {
+                padding: 40px 20px 60px;
+            }
+
+            .logo-area {
+                text-align: center;
+            }
+
+            .nav-container {
+                padding: 15px;
+            }
+
+            nav a {
+                padding: 8px 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header>
+        <div class="nav-container">
+
+            <a href="index.html" class="logo-area">
+                <img src="images/blackhawk-logo.png" alt="Pea Ridge Blackhawks">
+
+                <div class="logo-text">
+                    <strong>PEA RIDGE</strong>
+                    <span>SCHOLARSHIP HUB</span>
+                </div>
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="scholarships.html">Scholarships</a>
+                <a href="tips.html">Tips</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+        <h1>
+            Get in <span>Touch</span>
+        </h1>
+        <p>
+            Have questions about specific scholarships, deadlines, or applications? 
+            Reach out to our staff and counseling team for guidance.
+        </p>
+    </section>
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <main>
+
+        <!-- STAFF DIRECTORY -->
+        <section class="tips-section">
+            <h2 class="section-title">Staff <span>Directory</span></h2>
+            
+            <div class="tips-grid">
+                
+                <!-- Mr. Fingerhut -->
+                <div class="tip-card">
+                    <div>
+                        <h3><span>👨‍🏫</span> Mr. Fingerhut</h3>
+                        <div class="contact-role">Senior CCR Teacher and Scholarships Advisor</div>
+                    </div>
+                    <div class="contact-details">
+                        <p>📧 Email: <a href="mailto:mfingerhut@pearidgek12.com">colby.fingerhut@pearidgek12.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Mrs. Race -->
+                <div class="tip-card">
+                    <div>
+                        <h3><span>👩‍🏫</span> Mrs. Race</h3>
+                        <div class="contact-role">Counselor</div>
+                    </div>
+                    <div class="contact-details">
+                        <p>📧 Email: <a href="mailto:kati.race@pearidgek12.com">mrace@pearidgek12.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Mr. Meeks -->
+                <div class="tip-card">
+                    <div>
+                        <h3><span>👨‍💼</span> Mr. Meeks</h3>
+                        <div class="contact-role">Counselor</div>
+                    </div>
+                    <div class="contact-details">
+                        <p>📧 Email: <a href="mailto:">kenneth.meeks@pearidgek12.com</a></p>
+                    </div>
+                </div>
+
+                <!-- General / Other Contacts -->
+                <div class="tip-card">
+                    <div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+        <p>
+            © 2026 <strong>Pea Ridge Scholarship Hub</strong>
+        </p>
+    </footer>
+
+</body>
+</html>
