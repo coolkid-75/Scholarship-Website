@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tips & Advice | Pea Ridge Scholarship Hub</title>
+
+    <style>
+        :root {
+            --black: #090909;
+            --dark-black: #111111;
+            --red: #b5121b;
+            --bright-red: #d71920;
+            --white: #ffffff;
+            --off-white: #f5f5f5;
+            --gray: #d9d9d9;
+            --dark-gray: #242424;
+            --gold: #d4af37;
+            --light-gold: #f3d675;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--black);
+            color: var(--white);
+            min-height: 100vh;
+        }
+
+        /* =========================
+            HEADER
+        ========================= */
+
+        header {
+            background: var(--dark-black);
+            border-bottom: 3px solid var(--red);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: auto;
+            padding: 18px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .logo-area img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text strong {
+            font-size: 21px;
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            font-size: 11px;
+            color: var(--gold);
+            letter-spacing: 2px;
+            margin-top: 3px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 10px 16px;
+            border-radius: 4px;
+            transition: 0.2s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: var(--red);
+        }
+
+        /* =========================
+            HERO
+        ========================= */
+
+        .hero {
+            background:
+                linear-gradient(
+                    rgba(9, 9, 9, 0.88),
+                    rgba(9, 9, 9, 0.95)
+                ),
+                radial-gradient(
+                    circle at center,
+                    #2b0b0e 0%,
+                    #090909 65%
+                );
+
+            padding: 80px 30px 70px;
+            text-align: center;
+            border-bottom: 1px solid var(--dark-gray);
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 6vw, 72px);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: var(--red);
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            color: var(--gray);
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+            MAIN CONTENT
+        ========================= */
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px 30px 90px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title span {
+            color: var(--gold);
+        }
+
+        .tips-section {
+            margin-bottom: 60px;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .tip-card {
+            background: var(--dark-black);
+            border: 1px solid var(--dark-gray);
+            border-top: 4px solid var(--red);
+            padding: 30px;
+            position: relative;
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+        }
+
+        .tip-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .tip-card h3 span {
+            color: var(--gold);
+            font-size: 24px;
+        }
+
+        .tip-card p {
+            color: var(--gray);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+            FOOTER
+        ========================= */
+
+        footer {
+            background: var(--dark-black);
+            border-top: 3px solid var(--red);
+            padding: 35px 30px;
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        footer strong {
+            color: var(--white);
+        }
+
+        /* =========================
+            RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                flex-direction: column;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .hero {
+                padding: 60px 20px;
+            }
+
+            main {
+                padding: 40px 20px 60px;
+            }
+
+            .logo-area {
+                text-align: center;
+            }
+
+            .nav-container {
+                padding: 15px;
+            }
+
+            nav a {
+                padding: 8px 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header>
+        <div class="nav-container">
+
+            <a href="index.html" class="logo-area">
+                <img src="images/blackhawk-logo.png" alt="Pea Ridge Blackhawks">
+
+                <div class="logo-text">
+                    <strong>PEA RIDGE</strong>
+                    <span>SCHOLARSHIP HUB</span>
+                </div>
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="scholarships.html">Scholarships</a>
+                <a href="tips.html" class="active">Tips</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+        <h1>
+            Scholarship <span>Tips & Advice</span>
+        </h1>
+        <p>
+            Master the art of tracking down funds and submitting standout applications 
+            to maximize your college awards.
+        </p>
+    </section>
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <main>
+
+        <!-- HOW TO FIND SCHOLARSHIPS -->
+        <section class="tips-section">
+            <h2 class="section-title">How to <span>Find</span> Scholarships</h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3><span>01.</span> Start Local First</h3>
+                    <p>Local scholarships—such as those offered by Pea Ridge community groups, local businesses, and regional credit unions—have significantly fewer applicants than national awards, giving you a much higher statistical chance of winning.</p>
+                </div>
+
+                <div class="tip-card">
+                    <h3><span>02.</span> Leverage the Hub's Filters</h3>
+                    <p>Use the search and filter features on the Scholarships page efficiently. Search by keywords like "no-essay", "all-students", or filter by monetary tiers to target awards that match your specific situation.</p>
+                </div>
+
+                <div class="tip-card">
+                    <h3><span>03.</span> Check Institutional Aid</h3>
+                    <p>Look directly at the financial aid and scholarship pages of the specific colleges or universities you are planning to apply to. Many schools offer automatic consideration based on GPA and test scores.</p>
+                </div>
+
+                <div class="tip-card">
+                    <h3><span>04.</span> Broaden Your Search Criteria</h3>
+                    <p>Don't just search by your intended major. Look for opportunities based on your hobbies, parent employers, ethnic background, community service involvement, or unique life experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW TO APPLY FOR SCHOLARSHIPS -->
+        <section class="tips-section">
+            <h2 class="section-title">How to <span>Apply</span> Successfully</h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3><span>01.</span> Track Deadlines Closely</h3>
+                    <p>Create a calendar dedicated exclusively to scholarship due dates. Missing a deadline by even a few minutes means immediate disqualification, no matter how strong your submission is.</p>
+                </div>
+
+                <div class="tip-card">
+                    <h3><span>02.</span> Tailor Your Essays</h3>
+                    <p>Never copy-paste a generic essay for every application. Read the prompt carefully and customize your response to reflect the specific values, mission, or goals of the organization giving out the award.</p>
+                </div>
+
+                <div class="tip-card">
+                    <h3><span>03.</span> Secure Recommendations Early</h3>
+                    <p>Give your teachers, counselors, or mentors at least 2–3 weeks notice before asking them for a letter of recommendation. Provide them with a brief summary of your goals and accomplishments to help them write a stronger letter.</p>
+                </div>
+
+                <div class="tip-card">
+                    <h3><span>04.</span> Proofread Everything</h3>
+                    <p>Typos, grammatical errors, and incorrect formatting can sink an otherwise stellar application. Always review your work multiple times and have a trusted peer or teacher look it over before hitting submit.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+        <p>
+            © 2026 <strong>Pea Ridge Scholarship Hub</strong>
+        </p>
+    </footer>
+
+</body>
+</html>
