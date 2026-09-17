@@ -238,5 +238,17 @@
     "search": "Sallie Mae Grad School Scholarship $5000 no-essay",
     "page": "sallie-mae-grad-school-scholarship",
     "applicationUrl": "https://www.sallie.com/scholarships/grad-no-essay"
+  },
+  {
+    "name": "Rhodes Scholarships",
+    "amount": "$50,000 [95 Awards; 32 for US applicants]",
+    "amountValue": 50000,
+    "deadline": "October 1, 2026",
+    "badge": "Oct 1",
+    "description": "The Rhodes Scholarship provides funding for graduate study at the University of Oxford in the U.K. For U.S. applicants, the 2027 scholarship offers 32 awards and is for students entering Oxford in October 2027.",
+    "eligibility": "1. Must be a U.S. citizen, lawful permanent resident, or meet the specified active DACA eligibility requirements. 2. Must be 18–23 on October 1, 2026, or be under 27 and have completed your first undergraduate degree on or after October 1, 2025. 3. Must Complete your first undergraduate degree by July 2027. 4. Meet or exceed the academic requirements for your intended Oxford course; a 3.70/4.0 GPA or higher is strongly expected. 5. If English is not your first language, meet Oxford's higher-level English language requirements. 6. Must apply through the appropriate U.S. state/territory district based on the specified education or residency requirements. 7. You cannot apply to multiple U.S. districts or multiple Rhodes constituencies simultaneously.",
+    "search": "Rhodes Scholarship $50,000",
+    "page": "rhodes-scholarship.html",
+    "applicationUrl": "https://www.rhodeshouse.ox.ac.uk/office-of-the-american-secretary/application-overview/application-overview"
   }
 ]
