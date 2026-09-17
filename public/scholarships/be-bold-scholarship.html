@@ -54,17 +54,22 @@
         }
 
         .detail-icon {
-            width: 75px;
-            height: 75px;
+            min-width: 75px;
+            min-height: 75px;
+            width: fit-content;
 
-            display: grid;
-            place-items: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 12px 18px;
 
             margin-bottom: 25px;
 
             border-radius: 20px;
 
             font-size: 2.2rem;
+            line-height: 1;
 
             background:
                 linear-gradient(
@@ -72,7 +77,10 @@
                     rgba(24,166,166,.15),
                     rgba(18,63,112,.08)
                 );
+
+            box-sizing: border-box;
         }
+
 
         .detail-label {
             display: inline-block;
@@ -269,7 +277,7 @@
         <article class="scholarship-detail">
 
             <div class="detail-icon">
-                🎖️
+                Sep 30
             </div>
 
             <span class="detail-label">
@@ -279,6 +287,7 @@
             <h1>
                 Be Bold Scholarship
             </h1>
+
 
             <div class="detail-grid">
 
@@ -307,14 +316,18 @@
 
                 </div>
 
+            </div>
+
+
             <div class="detail-section">
 
                 <h2>
                     About This Scholarship
                 </h2>
+
                 <p>
-                    The "Be Bold" Scholarship is a no-essay scholarship that will be awarded to the applicant with the boldest profile. It takes less than 2 minutes to apply. This scholarship will be unique in that it will favor students who apply earlier-who are bold and seize the day without procrastinating.
-               	</p>
+                    The &quot;Be Bold&quot; Scholarship is a no-essay scholarship that will be awarded to the applicant with the boldest profile. It takes less than 2 minutes to apply. This scholarship will be unique in that it will favor students who apply earlier-who are bold and seize the day without procrastinating.
+                </p>
 
             </div>
 
@@ -326,17 +339,8 @@
                 </h2>
 
                 <p>
-                    For students who are:
+                    For students who are: 1. Earnest 2. Determined 3. Moving
                 </p>
-		<p>
-		    1. Earnest
-		</p>
-		<p>
-		    2. Determined
-		</p>
-		<p>
-		    3. Moving
-		</p>
 
             </div>
 
@@ -344,8 +348,9 @@
             <div class="detail-actions">
 
                 <a
-                    href="https://bold.org/scholarships/the-be-bold-no-essay-scholarship/#ref=best-scholarships"
+                    href="#"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="cta-button"
                 >
                     Visit Application →

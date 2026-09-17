@@ -54,17 +54,22 @@
         }
 
         .detail-icon {
-            width: 75px;
-            height: 75px;
+            min-width: 75px;
+            min-height: 75px;
+            width: fit-content;
 
-            display: grid;
-            place-items: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 12px 18px;
 
             margin-bottom: 25px;
 
             border-radius: 20px;
 
             font-size: 2.2rem;
+            line-height: 1;
 
             background:
                 linear-gradient(
@@ -72,7 +77,10 @@
                     rgba(24,166,166,.15),
                     rgba(18,63,112,.08)
                 );
+
+            box-sizing: border-box;
         }
+
 
         .detail-label {
             display: inline-block;
@@ -269,7 +277,7 @@
         <article class="scholarship-detail">
 
             <div class="detail-icon">
-                🎖️
+                Sep 29
             </div>
 
             <span class="detail-label">
@@ -279,6 +287,7 @@
             <h1>
                 Owl Scholarship
             </h1>
+
 
             <div class="detail-grid">
 
@@ -307,14 +316,18 @@
 
                 </div>
 
+            </div>
+
+
             <div class="detail-section">
 
                 <h2>
                     About This Scholarship
                 </h2>
+
                 <p>
                     The Owl Scholarship is a source of relief from the dreaded application process. We put students on the fast-track to success by providing direct access to the scholarships they need the most. Take the hassle out of financial aid and maximize your chance at a free ride in college.
-               	</p>
+                </p>
 
             </div>
 
@@ -325,26 +338,19 @@
                     Eligibility
                 </h2>
 
-		<p>
-		    1. Student must be a resident of the United States. 2. Student Must be 16 years or older.
-		</p>
-		<p>
-		    2. Student Must be 16 years or older.
-		</p>
-		<p>
-		    3. Student must either be enrolled in a college or university or registered in a qualified high school.
-		</p>
-		<p>
-		  4. Student must be located within the United States.
-    </p>
+                <p>
+                    1. Student must be a resident of the United States. 2. Student Must be 16 years or older. 3. Student must either be enrolled in a college or university or registered in a qualified high school. 4. Student must be located within the United States.
+                </p>
+
             </div>
 
 
             <div class="detail-actions">
 
                 <a
-                    href="https://scholarshipowl.com/awards/scholarshipowl-scholarship"
+                    href="#"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="cta-button"
                 >
                     Visit Application →
