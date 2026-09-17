@@ -162,9 +162,81 @@
     "deadline": "AR est. October 8, 2026",
     "badge": "Deadline Varies by State",
     "description": "The US Senate Youth Program Scholarship awards 100 student delegates selected by state education officials.",
-    "eligibility": "1. Student must be a high school junior or senior. 2. Student must hold a qualifying elected or appointed leadership position for the entire 2026-2027 academic year. 3. Student must demonstrate leadership through representing constituency and serving others. 4. Student must be enrolled in United States high schoola dn be a legal permanent resident of the United States. *See scholarship page to view all eligibility requirements.",
+    "eligibility": "1. Student must be a high school junior or senior. 2. Student must hold a qualifying elected or appointed leadership position for the entire 2026-2027 academic year. 3. Student must demonstrate leadership through representing constituency and serving others. 4. Student must be enrolled in United States high schoola dn be a legal permanent resident of the United States. *See application page to view all eligibility requirements.",
     "search": "US Senate Youth Program Scholarship $10000 leadership",
     "page": "us-senate-youth-program-scholarship.html",
     "applicationUrl": "https://ussenateyouth.org/selection_process_qualify/"
+  },
+  {
+    "name": "Markus Koch Memorial Scholarship",
+    "amount": "$1,000 [2 Awards]",
+    "amountValue": 1000,
+    "deadline": "February 28, 2027",
+    "badge": "Feb 28",
+    "description": "This scholarship seeks to honor the memory of Markus Koch by supporting students who share his drive and zeal for life. Students will be selected for this scholarship based on their responses toward this essay prompt: Please tell us a bit about yourself and explain why you are passionate about pursuing a career in construction or other trade-related field.",
+    "eligibility": "1. Student must attend Pea Ridge High School.",
+    "search": "Markus Koch Memorial Scholarship $1000 essay-based",
+    "page": "markus-koch-memorial-scholarship.html",
+    "applicationUrl": "https://bold.org/scholarships/markus-koch-memorial-scholarship"
+  },
+  {
+    "name": "Coca-Cola Scholars Program Scholarship",
+    "amount": "$20,000 [150 Awards]",
+    "amountValue": 20000,
+    "deadline": "September 30, 2026",
+    "badge": "Sep 30",
+    "description": "The Coca-Cola Scholars Program scholarship is an achievement-based scholarship awarded to students in their final year of high school. Students are recognized for their capacity to lead and serve, as well as their commitment to making a significant impact on their schools and communities.",
+    "eligibility": "1. Student must be a senior in high school.",
+    "search": "Coca-Cola Scholars Program Scholarship $20000 senior",
+    "page": "coca-cola-scholars-program-scholarship.html",
+    "applicationUrl": "https://www.coca-colascholarsfoundation.org/apply"
+  },
+  {
+    "name": "ASHOF Student-Athlete Scholarship",
+    "amount": "$1,000 [10 Awards]",
+    "amountValue": 1000,
+    "deadline": "December 31, 2026",
+    "badge": "Dec 31",
+    "description": "Each year the Arkansas Sports Hall of Fame awards ten $1,000 dollar scholarships to senior student athletes. Five awards will be given to male student-athletes, and five awards to female student-athletes. The first 100 essays submitted will be considered for review.",
+    "eligibility": "1. Student must be a senior in highschool. 2. Student must play a school-affiliated sport recgonized by the Arkansas Sports Hall of Fame.",
+    "search": "ASHOF Arkansas Sports Hall of Fame Scholarship $1000 essay-based athlete senior",
+    "page": "arkansas-sports-hall-of-fame-scholarship.html",
+    "applicationUrl": "https://www.arksportshalloffame.com/scholarships"
+  },
+  {
+    "name": "Dr Pepper Tuition Giveaway",
+    "amount": "$100,000 [9 Awards]",
+    "amountValue": 100000,
+    "deadline": "September 30, 2026",
+    "badge": "Sep 30",
+    "description": "College is all about chasing your dreams. And for over 30 years, we’ve helped students turn their dreams into a reality with the Dr Pepper Tuition Giveaway. Enter now for the chance to win $100K in tuition and be a part of history. It’s a Pepper Thing™",
+    "eligibility": "1. Student must be between the ages of 18 and 24 at the time of application submission.",
+    "search": "Dr Pepper Tuition Giveaway $100000",
+    "page": "dr-pepper-tutition-giveaway.html",
+    "applicationUrl": "https://www.drpepper.com/tutition"
+  },
+  {
+    "name": "Path to Pro Scholarship Program",
+    "amount": "$2,500 [125 Awards]",
+    "amountValue": 2500,
+    "deadline": "September 30, 2026",
+    "badge": "Sep 30",
+    "description": "The Home Depot and The Home Depot Foundation are committed to educating more people in the skilled trades and helping them find careers in the home improvement industry through our Path to Pro program. This scholarship is a means to achieve that goal.",
+    "eligibility": "1. Student must be a high school senior, high school graduate, or have a GED equivalent. 2. Student must plan to enroll or be enrolled within 1 year in an approved trade-related program. 3. Student must not be an employee or dependent of an employee at The Home Depot. 4. Student must be in one of the following career paths or programs: Carpentry, Construction Management, Electrical, HVAC, Plumbing.",
+    "search": "Path to Pro Scholarship Program $2500 Trade Construction senior",
+    "page": "path-to-pro-scholarship.html",
+    "applicationUrl": "https://webportalapp.com/sp/login/skillpointefoundation_homedepot-pathtopro"
+  },
+  {
+    "name": "Sallie Mae Grad School Scholarship",
+    "amount": "$5,000 [4 Awards]",
+    "amountValue": 5000,
+    "deadline": "September 30, 2026",
+    "badge": "Sep 30",
+    "description": "The $5,000 No-Essay Grad School Scholarship by Sallie Sweepstakes is only open to legal residents of the 50 United States, the District of Columbia and any US Territory age 18 or older at the time of entry, and who meet one of the four following eligibility requirements.",
+    "eligibility": "1.  parent or guardian who currently has a student enrolled in an accredited college or university located within the United States. 2. A student who is currently enrolled in an accredited college or university located within the United States. 3. A parent or guardian who has a student who will enroll in an accredited college or university located in the United States within three to six months from the Sweepstakes Drawing Date. 4. A student who will enroll in an accredited college or university located in the United States within three to six months from the Sweepstakes Drawing Date.",
+    "search": "Sallie Mae Grad School Scholarship $5000 no-essay",
+    "page": "sallie-mae-grad-school-scholarship",
+    "applicationUrl": "https://www.sallie.com/scholarships/grad-no-essay"
   }
 ]
