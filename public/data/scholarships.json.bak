@@ -586,5 +586,101 @@
     "search": "Reutzel Foundation Excellence Scholarship NWA $1000 senior",
     "page": "reutzel-foundation-excellence-scholarship-nwa.html",
     "applicationUrl": "https://reutzelfoundation.org/"
+  },
+  {
+    "name": "Lamber-Goodnow Scholarships",
+    "amount": "$1,000 [8 Awards]",
+    "amountValue": 1000,
+    "deadline": "December 1, 2026",
+    "badge": "Dec 1",
+    "description": "At Lamber Goodnow, we believe that education is the most powerful tool for long-term public safety. That is why our award-winning firm with a legacy of advocacy through our partnership with Fennemore (Est. 1885) is proud to offer the following academic scholarships to students nationwide.",
+    "eligibility": "1. Must have a minimum 3.5 GPA and be enrolled in an accredited high school or college. 2. Must be enrolled in or applying to a nursing program. 3. Must be enrolled in or applying to law school. 4. Must be enrolled in or applying to medical school. 5. Must be enrolled in or applying to a PT or OT program. 6. Must meet the applicable eligibility requirements for the Summer College or Summer Law School scholarship.",
+    "search": "Lamber-Goodnow Scholarships $1000 gpa-based law school",
+    "page": "lamber-goodnow-scholarships.html",
+    "applicationUrl": "https://lambergoodnow.com/lg-scholarships/"
+  },
+  {
+    "name": "Ron Brown Scholarships Program",
+    "amount": "$40,000 [20 Awards]",
+    "amountValue": 40000,
+    "deadline": "December 1, 2026",
+    "badge": "Dec 1",
+    "description": "The Ron Brown Scholarship supports talented, community-minded African American students who demonstrate strong academics, leadership, community service, and financial need. Scholars may use the award at any accredited four-year college or university in the United States and pursue any field of study.",
+    "eligibility": "1. Must be Black/African American. 2. Must excel academically. 3. Must demonstrate exceptional leadership potential. 4. Must participate in community service activities. 5. Must demonstrate financial need. 6. Must be a U.S. citizen or permanent resident. 7. Must be a current high school senior at the time of application.",
+    "search": "Ron Brown Scholarships Program $40000 race-based",
+    "page": "ron-brown-scholarships-program.html",
+    "applicationUrl": "https://ronbrown.org/ron-brown-scholarship/"
+  },
+  {
+    "name": "Student OpEd Scholarship",
+    "amount": "$5,000 [3 Awards]",
+    "amountValue": 5000,
+    "deadline": "December 5, 2026",
+    "badge": "Dec 5",
+    "description": "The Student OpEd Scholarship supports enrolled college students who develop original, well-researched arguments about infrastructure challenges. Applicants must write an OpEd based on the provided prompt, incorporate Aii research, and submit the article to a publication.",
+    "eligibility": "1. Must be a currently enrolled college or graduate student in the United States. 2. Must submit only one entry. 3. Must write an original OpEd of no more than 900 words addressing the prompt. 4. Must cite Aii research and materials in the article. 5. Must submit the article to a local, state, or national publication. 6. Must provide a published article link or proof of a good-faith submission attempt.",
+    "search": "Student OpEd Scholarship $5000 essay-based",
+    "page": "student-oped-scholarship.html",
+    "applicationUrl": "https://www.aii.org/student-scholarship-contest/"
+  },
+  {
+    "name": "Science Ambassador Scholarship",
+    "amount": "$20,000 [5 Awards]",
+    "amountValue": 20000,
+    "deadline": "December 14, 2026",
+    "badge": "Dec 14",
+    "description": "The Science Ambassador Scholarship supports women and non-binary students pursuing STEM education. Applicants create a short educational video teaching a STEM topic they are passionate about.",
+    "eligibility": "1. Must be a high school senior or undergraduate college student. 2. Must identify as a woman or non-binary student. 3. Must create an educational video explaining a STEM topic. 4. Must keep the video three minutes or less. 5. Must ensure the video is scientifically accurate and cite research sources. 6. Must upload the video to YouTube as a public, non-Shorts video.",
+    "search": "Science Ambassador Scholarship $20000 video-based women female non-binary STEM",
+    "page": "science-ambassador-scholarship.html",
+    "applicationUrl": "https://www.scienceambassadorscholarship.org/"
+  },
+  {
+    "name": "Burger King Scholars Program",
+    "amount": "$60,000 [4200 Awards]",
+    "amountValue": 60000,
+    "deadline": "December 15, 2026",
+    "badge": "Dec 15",
+    "description": "The Burger King Scholars Program provides scholarships to high school seniors, Burger King employees, and their families to help cover college or post-secondary vocational/technical education. Awards are based on factors including academics, work experience, extracurricular activities, financial need, and community service.",
+    "eligibility": "1. Must be a high school senior or Burger King employee or family member. 2. Must be pursuing a college or post-secondary vocational/technical education. 3. Must demonstrate academic achievement, work experience, extracurricular involvement, financial need, and/or community service.",
+    "search": "Burger King Scholars Program $60000 senior need-based volunteer-based",
+    "page": "burger-king-scholars-program.html",
+    "applicationUrl": "https://www.burgerkingfoundation.org/programs/burger-king-sm-scholars"
+  },
+  {
+    "name": "ELG Scholarship Program",
+    "amount": "$5,000 [3 Awards]",
+    "amountValue": 5000,
+    "deadline": "December 15, 2026",
+    "badge": "Dec 15",
+    "description": "The ELG Scholarship Program supports students who have been personally affected by cancer through a parent, sibling, immediate family member, or close friend who was an ELG Law client. The scholarship helps eligible students continue their education.",
+    "eligibility": "1. Must be at least 18 years old and a U.S. citizen. 2. Must be enrolled full-time in an accredited U.S.-based two-year or four-year university, community college, junior college, or graduate program. 3. Must have a minimum 3.0 GPA. 4. Must have witnessed a parent, sibling, immediate family member, or close friend fight cancer who is or was an ELG Law client. 5. Must submit a 500–1,500 word essay on “What it takes to fight cancer?”",
+    "search": "ELG Scholarship Program $5000 gpa-based cancer essay-based",
+    "page": "elg-scholarship-program.html",
+    "applicationUrl": "https://www.elglaw.com/scholarship/"
+  },
+  {
+    "name": "RonranGlee Literary Scholarship",
+    "amount": "$2,000 [5 Awards]",
+    "amountValue": 2000,
+    "deadline": "December 26, 2026",
+    "badge": "Dec 26",
+    "description": "The RonranGlee Literary Scholarship supports students who value close reading and deeper interpretation of texts. Applicants demonstrate their ability to identify and explain underlying meanings in a written passage.",
+    "eligibility": "1. Must be a high school senior or two- or four-year undergraduate student. 2. Must submit a paragraph and a short essay explaining the underlying meaning of the provided text.",
+    "search": "RonranGlee Literary Scholarship $2000 senior undergraduate essay-based",
+    "page": "ronranglee-literary-scholarship.html",
+    "applicationUrl": "https://bold.org/scholarships/ronran-glee-literary-scholarship/#ref=best-scholarships"
+  },
+  {
+    "name": "Thiel Fellowship Scholarship",
+    "amount": "$250,000 [30 Awards]",
+    "amountValue": 250000,
+    "deadline": "December 31, 2026",
+    "badge": "Dec 31",
+    "description": "The Thiel Fellowship supports young people pursuing ambitious projects such as startups, new technologies, research, nonprofits, and other innovative ideas. Fellows receive funding and mentorship while focusing on their projects outside the traditional college path.",
+    "eligibility": "1. Must be 22 years old or younger. 2. Must not have a university degree. 3. Must be willing to leave school if selected for the Fellowship. 4. Must demonstrate meaningful progress toward a concrete vision or project. 5. Must be pursuing an ambitious project, such as a startup, technology, research, nonprofit, consumer product, media company, or hardware.",
+    "search": "Thiel Fellowship Scholarship $250000 age-based project-based",
+    "page": "thiel-fellowship-scholarship.html",
+    "applicationUrl": "https://thielfellowship.org/faq/"
   }
 ]
