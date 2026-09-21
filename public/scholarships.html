@@ -445,19 +445,43 @@
         <div class="nav-container">
 
             <a href="index.html" class="logo-area">
-                <img src="images/blackhawk-logo.png" alt="Pea Ridge Blackhawks">
+
+                <img
+                    src="images/blackhawk-logo.png"
+                    alt="Pea Ridge Blackhawks"
+                >
 
                 <div class="logo-text">
+
                     <strong>PEA RIDGE</strong>
+
                     <span>SCHOLARSHIP HUB</span>
+
                 </div>
+
             </a>
 
             <nav>
-                <a href="index.html">Home</a>
-                <a href="scholarships.html" class="active">Scholarships</a>
-                <a href="tips.html">Tips</a>
-                <a href="contact.html">Contact</a>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a
+                    href="scholarships.html"
+                    class="active"
+                >
+                    Scholarships
+                </a>
+
+                <a href="tips.html">
+                    Tips
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
             </nav>
 
         </div>
@@ -494,13 +518,16 @@
         <section class="controls">
 
             <div class="search-box">
+
                 <input
                     type="text"
                     id="searchInput"
                     placeholder="Search scholarships... Keyword examples: no-essay, $5000, all-students, etc."
                     autocomplete="off"
                 >
+
             </div>
+
 
             <div class="filter-buttons">
 
@@ -534,8 +561,13 @@
 
             </div>
 
+
             <div class="result-count">
-                Showing <strong id="resultCount">0</strong> scholarships
+
+                Showing
+                <strong id="resultCount">0</strong>
+                scholarships
+
             </div>
 
         </section>
@@ -547,9 +579,11 @@
             class="scholarship-grid"
             id="scholarshipGrid"
         >
+
             <div class="no-results">
                 Loading scholarships...
             </div>
+
         </section>
 
     </main>
@@ -560,9 +594,12 @@
     ========================== -->
 
     <footer>
+
         <p>
-            © 2026 <strong>Pea Ridge Scholarship Hub</strong>
+            © 2026
+            <strong>Pea Ridge Scholarship Hub</strong>
         </p>
+
     </footer>
 
 
@@ -594,6 +631,123 @@
 
 
         // ==========================================
+        // GET TODAY'S DATE
+        // ==========================================
+
+        function getToday() {
+
+            const today = new Date();
+
+            today.setHours(0, 0, 0, 0);
+
+            return today;
+
+        }
+
+
+        // ==========================================
+        // PARSE SCHOLARSHIP DEADLINE
+        // ==========================================
+        //
+        // Expected JSON format:
+        //
+        // "deadline": "September 30, 2026"
+        //
+        // ==========================================
+
+        function parseDeadline(deadline) {
+
+            if (!deadline) {
+                return null;
+            }
+
+
+            const value =
+                String(deadline).trim();
+
+
+            // Match:
+            // September 30, 2026
+
+            const match =
+                value.match(
+                    /^([A-Za-z]+)\s+(\d{1,2}),\s+(\d{4})$/
+                );
+
+
+            if (!match) {
+
+                console.warn(
+                    "Invalid scholarship deadline:",
+                    deadline
+                );
+
+                return null;
+
+            }
+
+
+            const monthName =
+                match[1];
+
+            const day =
+                Number(match[2]);
+
+            const year =
+                Number(match[3]);
+
+
+            const monthNames = [
+
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+
+            ];
+
+
+            const month =
+                monthNames.indexOf(monthName);
+
+
+            if (month === -1) {
+
+                console.warn(
+                    "Invalid month in deadline:",
+                    deadline
+                );
+
+                return null;
+
+            }
+
+
+            const date =
+                new Date(
+                    year,
+                    month,
+                    day
+                );
+
+
+            date.setHours(0, 0, 0, 0);
+
+
+            return date;
+
+        }
+
+
+        // ==========================================
         // LOAD JSON
         // ==========================================
 
@@ -602,17 +756,31 @@
             .then(response => {
 
                 if (!response.ok) {
+
                     throw new Error(
                         "Could not load scholarship data."
                     );
+
                 }
 
                 return response.json();
+
             })
 
             .then(scholarships => {
 
-                allScholarships = scholarships;
+                if (!Array.isArray(scholarships)) {
+
+                    throw new Error(
+                        "Scholarship JSON must contain an array."
+                    );
+
+                }
+
+
+                allScholarships =
+                    scholarships;
+
 
                 renderScholarships();
 
@@ -622,17 +790,29 @@
 
                 console.error(error);
 
+
                 scholarshipGrid.innerHTML = `
+
                     <div class="no-results">
-                        <h2>Unable to Load Scholarships</h2>
+
+                        <h2>
+                            Unable to Load Scholarships
+                        </h2>
+
                         <p>
-                            Please make sure the website is being
-                            opened through a local web server.
+                            Please make sure the scholarship
+                            data file exists and the website
+                            is being opened through a local
+                            web server.
                         </p>
+
                     </div>
+
                 `;
 
+
                 resultCount.textContent = "0";
+
             });
 
 
@@ -642,16 +822,25 @@
 
         function createScholarshipCard(scholarship) {
 
-            const card = document.createElement("a");
+            const card =
+                document.createElement("a");
 
-            card.className = "scholarship-card";
+
+            card.className =
+                "scholarship-card";
+
 
             card.href =
-                "scholarships/" + scholarship.page;
+                "scholarships/" +
+                scholarship.page;
 
-            card.target = "_blank";
 
-            card.rel = "noopener";
+            card.target =
+                "_blank";
+
+
+            card.rel =
+                "noopener";
 
 
             // Large scholarship styling
@@ -667,44 +856,69 @@
                 <div class="card-top">
 
                     <div>
+
                         <h2>
-                            ${escapeHTML(scholarship.name)}
+                            ${escapeHTML(
+                                scholarship.name
+                            )}
                         </h2>
+
                     </div>
 
+
                     <div class="deadline-badge">
-                        ${escapeHTML(scholarship.badge)}
+
+                        ${escapeHTML(
+                            scholarship.badge
+                        )}
+
                     </div>
 
                 </div>
 
 
                 <div class="${amountClass}">
-                    ${escapeHTML(scholarship.amount)}
+
+                    ${escapeHTML(
+                        scholarship.amount
+                    )}
+
                 </div>
 
 
                 <div class="description">
-                    ${escapeHTML(scholarship.description)}
+
+                    ${escapeHTML(
+                        scholarship.description
+                    )}
+
                 </div>
 
 
                 <div class="eligibility">
 
-                    <strong>Eligibility:</strong>
+                    <strong>
+                        Eligibility:
+                    </strong>
 
-                    ${escapeHTML(scholarship.eligibility)}
+                    ${escapeHTML(
+                        scholarship.eligibility
+                    )}
 
                 </div>
 
 
                 <div class="card-footer">
+
                     View Scholarship →
+
                 </div>
 
             `;
 
+
             return card;
+
         }
 
 
@@ -722,94 +936,165 @@
 
             // Clear current cards
 
-            scholarshipGrid.innerHTML = "";
+            scholarshipGrid.innerHTML =
+                "";
 
 
             // Get today's date
 
-            const today = new Date();
+            const today =
+                getToday();
 
-            today.setHours(0, 0, 0, 0);
 
-
-            // Filter scholarships
+            // ==========================================
+            // FILTER SCHOLARSHIPS
+            // ==========================================
 
             const filteredScholarships =
-                allScholarships.filter(scholarship => {
-
-                    const searchableText = `
-                        ${scholarship.name}
-                        ${scholarship.amount}
-                        ${scholarship.deadline}
-                        ${scholarship.description}
-                        ${scholarship.eligibility}
-                        ${scholarship.search}
-                    `.toLowerCase();
+                allScholarships.filter(
+                    scholarship => {
 
 
-                    const matchesSearch =
-                        searchableText.includes(searchTerm);
+                        // ==========================================
+                        // SEARCH
+                        // ==========================================
+
+                        const searchableText = `
+
+                            ${scholarship.name || ""}
+
+                            ${scholarship.amount || ""}
+
+                            ${scholarship.deadline || ""}
+
+                            ${scholarship.description || ""}
+
+                            ${scholarship.eligibility || ""}
+
+                            ${scholarship.search || ""}
+
+                        `.toLowerCase();
 
 
-                    let matchesAmount = true;
+                        const matchesSearch =
+                            searchableText.includes(
+                                searchTerm
+                            );
 
 
-                    if (currentFilter === "large") {
+                        // ==========================================
+                        // AMOUNT FILTER
+                        // ==========================================
 
-                        matchesAmount =
-                            scholarship.amountValue >= 10000;
+                        let matchesAmount = true;
+
+
+                        if (
+                            currentFilter === "large"
+                        ) {
+
+                            matchesAmount =
+                                Number(
+                                    scholarship.amountValue
+                                ) >= 10000;
+
+                        }
+
+                        else if (
+                            currentFilter === "medium"
+                        ) {
+
+                            matchesAmount =
+                                Number(
+                                    scholarship.amountValue
+                                ) >= 5000;
+
+                        }
+
+                        else if (
+                            currentFilter === "small"
+                        ) {
+
+                            matchesAmount =
+                                Number(
+                                    scholarship.amountValue
+                                ) > 0 &&
+                                Number(
+                                    scholarship.amountValue
+                                ) < 5000;
+
+                        }
+
+
+                        // ==========================================
+                        // DEADLINE FILTER
+                        // ==========================================
+
+                        const deadlineDate =
+                            parseDeadline(
+                                scholarship.deadline
+                            );
+
+
+                        /*
+                         * If the deadline cannot be parsed,
+                         * do NOT display the scholarship.
+                         *
+                         * This prevents scholarships with
+                         * broken/missing dates from appearing.
+                         */
+
+                        if (
+                            deadlineDate === null
+                        ) {
+
+                            return false;
+
+                        }
+
+
+                        /*
+                         * IMPORTANT:
+                         *
+                         * deadlineDate >= today
+                         *
+                         * means:
+                         *
+                         * Deadline today     = SHOW
+                         * Deadline tomorrow   = SHOW
+                         * Deadline yesterday  = HIDE
+                         */
+
+                        const matchesDeadline =
+                            deadlineDate.getTime() >=
+                            today.getTime();
+
+
+                        return (
+                            matchesSearch &&
+                            matchesAmount &&
+                            matchesDeadline
+                        );
 
                     }
-
-                    else if (currentFilter === "medium") {
-
-                        matchesAmount =
-                            scholarship.amountValue >= 5000;
-
-                    }
-
-                    else if (currentFilter === "small") {
-
-                        matchesAmount =
-                            scholarship.amountValue > 0 &&
-                            scholarship.amountValue < 5000;
-
-                    }
+                );
 
 
-                    // ==========================================
-                    // DEADLINE FILTER
-                    // ==========================================
-
-                    const deadlineDate =
-                        new Date(scholarship.deadline);
-
-                    deadlineDate.setHours(0, 0, 0, 0);
-
-
-                    const matchesDeadline =
-                        !isNaN(deadlineDate.getTime()) &&
-                        deadlineDate >= today;
-
-
-                    return (
-                        matchesSearch &&
-                        matchesAmount &&
-                        matchesDeadline
-                    );
-
-                });
-
-
-            // Update count
+            // ==========================================
+            // UPDATE RESULT COUNT
+            // ==========================================
 
             resultCount.textContent =
                 filteredScholarships.length;
 
 
-            // No results
+            // ==========================================
+            // NO RESULTS
+            // ==========================================
 
-            if (filteredScholarships.length === 0) {
+            if (
+                filteredScholarships.length === 0
+            ) {
 
                 scholarshipGrid.innerHTML = `
 
@@ -820,7 +1105,8 @@
                         </h2>
 
                         <p>
-                            Try changing your search or filter.
+                            Try changing your search
+                            or filter.
                         </p>
 
                     </div>
@@ -828,16 +1114,21 @@
                 `;
 
                 return;
+
             }
 
 
-            // Add cards
+            // ==========================================
+            // ADD CARDS
+            // ==========================================
 
             filteredScholarships.forEach(
                 scholarship => {
 
                     scholarshipGrid.appendChild(
-                        createScholarshipCard(scholarship)
+                        createScholarshipCard(
+                            scholarship
+                        )
                     );
 
                 }
@@ -860,29 +1151,41 @@
         // FILTER BUTTONS
         // ==========================================
 
-        filterButtons.forEach(button => {
+        filterButtons.forEach(
+            button => {
 
-            button.addEventListener("click", () => {
-
-                filterButtons.forEach(btn => {
-
-                    btn.classList.remove("active");
-
-                });
+                button.addEventListener(
+                    "click",
+                    () => {
 
 
-                button.classList.add("active");
+                        filterButtons.forEach(
+                            btn => {
+
+                                btn.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
 
 
-                currentFilter =
-                    button.dataset.filter;
+                        button.classList.add(
+                            "active"
+                        );
 
 
-                renderScholarships();
+                        currentFilter =
+                            button.dataset.filter;
 
-            });
 
-        });
+                        renderScholarships();
+
+                    }
+                );
+
+            }
+        );
 
 
         // ==========================================
@@ -893,16 +1196,86 @@
 
             return String(value)
 
-                .replace(/&/g, "&amp;")
+                .replace(
+                    /&/g,
+                    "&amp;"
+                )
 
-                .replace(/</g, "&lt;")
+                .replace(
+                    /</g,
+                    "&lt;"
+                )
 
-                .replace(/>/g, "&gt;")
+                .replace(
+                    />/g,
+                    "&gt;"
+                )
 
-                .replace(/"/g, "&quot;")
+                .replace(
+                    /"/g,
+                    "&quot;"
+                )
 
-                .replace(/'/g, "&#039;");
+                .replace(
+                    /'/g,
+                    "&#039;"
+                );
+
         }
+
+
+        // ==========================================
+        // AUTOMATIC DAILY REFRESH
+        // ==========================================
+        //
+        // If someone leaves the page open overnight,
+        // expired scholarships will automatically disappear
+        // after the date changes.
+        //
+        // ==========================================
+
+        function scheduleDailyRefresh() {
+
+            const now =
+                new Date();
+
+
+            const tomorrow =
+                new Date();
+
+
+            tomorrow.setDate(
+                tomorrow.getDate() + 1
+            );
+
+
+            tomorrow.setHours(
+                0,
+                0,
+                1,
+                0
+            );
+
+
+            const millisecondsUntilTomorrow =
+                tomorrow.getTime() -
+                now.getTime();
+
+
+            setTimeout(() => {
+
+                renderScholarships();
+
+                scheduleDailyRefresh();
+
+            }, millisecondsUntilTomorrow);
+
+        }
+
+
+        // Start daily refresh
+
+        scheduleDailyRefresh();
 
     </script>
 
