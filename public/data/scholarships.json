@@ -874,5 +874,17 @@
     "search": "Review It Scholarship $1000 gpa-based academic senior",
     "page": "review-it-scholarship.html",
     "applicationUrl": "https://studentscholarships.org/managed/review-it-scholarship"
+  },
+  {
+    "name": "Test Scholarship",
+    "amount": "$25 [1 Award]",
+    "amountValue": 25,
+    "deadline": "September 22, 2026",
+    "badge": "Sep 22",
+    "description": "This is a test scholarship",
+    "eligibility": "1. Must exist",
+    "search": "Test Scholarship",
+    "page": "test-scholarship.html",
+    "applicationUrl": "https://google.com"
   }
 ]
