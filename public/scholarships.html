@@ -725,6 +725,13 @@
             scholarshipGrid.innerHTML = "";
 
 
+            // Get today's date
+
+            const today = new Date();
+
+            today.setHours(0, 0, 0, 0);
+
+
             // Filter scholarships
 
             const filteredScholarships =
@@ -770,7 +777,26 @@
                     }
 
 
-                    return matchesSearch && matchesAmount;
+                    // ==========================================
+                    // DEADLINE FILTER
+                    // ==========================================
+
+                    const deadlineDate =
+                        new Date(scholarship.deadline);
+
+                    deadlineDate.setHours(0, 0, 0, 0);
+
+
+                    const matchesDeadline =
+                        !isNaN(deadlineDate.getTime()) &&
+                        deadlineDate >= today;
+
+
+                    return (
+                        matchesSearch &&
+                        matchesAmount &&
+                        matchesDeadline
+                    );
 
                 });
 
@@ -882,3 +908,4 @@
 
 </body>
 </html>
+
