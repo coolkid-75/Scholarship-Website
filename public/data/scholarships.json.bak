@@ -605,7 +605,7 @@
     "amountValue": 40000,
     "deadline": "December 1, 2026",
     "badge": "Dec 1",
-    "description": "The Ron Brown Scholarship supports African American students who demonstrate academic achievement, leadership, community service, and financial need. Scholars may attend any accredited four-year college or university and pursue any field of study.",
+    "description": "The Ron Brown Scholarship supports African American students with strong academics, leadership, community service, and financial need at accredited four-year colleges or universities.",
     "eligibility": "1. Must be Black/African American. 2. Must excel academically. 3. Must demonstrate exceptional leadership potential. 4. Must participate in community service activities. 5. Must demonstrate financial need. 6. Must be a U.S. citizen or permanent resident. 7. Must be a current high school senior at the time of application.",
     "search": "Ron Brown Scholarships Program $40000 race-based",
     "page": "ron-brown-scholarships-program.html",
@@ -641,7 +641,7 @@
     "amountValue": 60000,
     "deadline": "December 15, 2026",
     "badge": "Dec 15",
-    "description": "The Burger King Scholars Program provides scholarships to high school seniors, Burger King employees, and their families for college or post-secondary education. Awards consider academics, extracurriculars, work experience, financial need, and community service.",
+    "description": "The Burger King Scholars Program provides scholarships to high school seniors, Burger King employees, and their families based on academics, extracurriculars, work experience, financial need, and community service.",
     "eligibility": "1. Must be a high school senior or Burger King employee or family member. 2. Must be pursuing a college or post-secondary vocational/technical education. 3. Must demonstrate academic achievement, work experience, extracurricular involvement, financial need, and/or community service.",
     "search": "Burger King Scholars Program $60000 senior need-based volunteer-based",
     "page": "burger-king-scholars-program.html",
@@ -677,10 +677,34 @@
     "amountValue": 250000,
     "deadline": "December 31, 2026",
     "badge": "Dec 31",
-    "description": "The Thiel Fellowship supports young people pursuing ambitious projects in startups, technology, research, nonprofits, and other innovative fields. Fellows receive funding and mentorship while pursuing their projects outside the traditional college path.",
+    "description": "The Thiel Fellowship supports young people pursuing ambitious projects in startups, technology, research, nonprofits, and other innovative fields.",
     "eligibility": "1. Must be 22 years old or younger. 2. Must not have a university degree. 3. Must be willing to leave school if selected for the Fellowship. 4. Must demonstrate meaningful progress toward a concrete vision or project. 5. Must be pursuing an ambitious project, such as a startup, technology, research, nonprofit, consumer product, media company, or hardware.",
     "search": "Thiel Fellowship Scholarship $250000 age-based project-based",
     "page": "thiel-fellowship-scholarship.html",
     "applicationUrl": "https://thielfellowship.org/faq/"
+  },
+  {
+    "name": "Diller Teen Tikkun Olam Awards",
+    "amount": "$36,000 [15 Awards]",
+    "amountValue": 36000,
+    "deadline": "January 7, 2027",
+    "badge": "Jan 7",
+    "description": "The Diller Teen Tikkun Olam Awards recognize young Jewish leaders in the United States who volunteer on impactful initiatives embodying the value of tikkun olam, or repairing the world.",
+    "eligibility": "1. 15-19 years old by application deadline. 2. Identify as Jewish. 3. A resident of the United States (continental U.S., Alaska, or Hawaii). 4. Applicants’ project leadership must be conducted from the U.S., though projects may have global reach. 5. Currently serving in a leadership role on an initiative that is having measurable impact and embodies the values of tikkun olam (repairing the world). 6. Volunteering without any compensation.",
+    "search": "Diller Teen Tikkun Olam Awards $36000 project-based leadership tikkun olam volunteer-based",
+    "page": "diller-teen-tikkun-olam.html",
+    "applicationUrl": "https://dillerteenawards.org/about-the-awards/"
+  },
+  {
+    "name": "Profile in Courage High School Awards",
+    "amount": "$10,000 [20 Awards]",
+    "amountValue": 10000,
+    "deadline": "January 11, 2027",
+    "badge": "Jan 11",
+    "description": "The Profile in Courage High School Awards invites U.S. high school students to write essays describing an act of political courage by an eligible U.S. elected official who served during or after 1917.",
+    "eligibility": "1. United States high school students in grades nine through twelve attending public, private, parochial, or home schools; 2. U.S. students under the age of twenty enrolled in a high school correspondence/GED program in any of the fifty states, the District of Columbia, or the U.S. territories; 3. U.S. citizens attending schools overseas. 4. Past winners and finalists are not eligible to participate. Employees of sponsors and members of their families are not eligible to participate.",
+    "search": "Profile in Courage High School Awards $10000 freshman sophomore junior senior GED JFK",
+    "page": "profile-in-courage-high-school-awards.html",
+    "applicationUrl": "https://www.jfklibrary.org/learn/education/profile-in-courage-essay-contest/for-student-participants/eligibility-and-requirements"
   }
 ]
