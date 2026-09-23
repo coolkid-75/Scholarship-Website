@@ -354,83 +354,446 @@
 <script>
     const bigRewardsGrid = document.getElementById("bigRewardsGrid");
 
-    fetch("data/scholarships.json")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Could not load scholarship data.");
-            }
-            return response.json();
-        })
-        .then(scholarships => {
-            // Filter only scholarships with amountValue >= 10000
-            const bigRewards = scholarships.filter(s => s.amountValue >= 10000);
 
-            bigRewardsGrid.innerHTML = "";
+    // ==========================================
+    // GET TODAY'S DATE
+    // ==========================================
 
-            if (bigRewards.length === 0) {
+    function getToday() {
+
+        const today = new Date();
+
+        today.setHours(0, 0, 0, 0);
+
+        return today;
+
+    }
+
+
+    // ==========================================
+    // PARSE SCHOLARSHIP DEADLINE
+    // ==========================================
+    //
+    // Expected JSON format:
+    //
+    // "deadline": "September 30, 2026"
+    //
+    // ==========================================
+
+    function parseDeadline(deadline) {
+
+        if (!deadline) {
+            return null;
+        }
+
+
+        const value =
+            String(deadline).trim();
+
+
+        const match =
+            value.match(
+                /^([A-Za-z]+)\s+(\d{1,2}),\s+(\d{4})$/
+            );
+
+
+        if (!match) {
+
+            console.warn(
+                "Invalid scholarship deadline:",
+                deadline
+            );
+
+            return null;
+
+        }
+
+
+        const monthName =
+            match[1];
+
+        const day =
+            Number(match[2]);
+
+        const year =
+            Number(match[3]);
+
+
+        const monthNames = [
+
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+
+        ];
+
+
+        const month =
+            monthNames.indexOf(monthName);
+
+
+        if (month === -1) {
+
+            console.warn(
+                "Invalid month in deadline:",
+                deadline
+            );
+
+            return null;
+
+        }
+
+
+        const date =
+            new Date(
+                year,
+                month,
+                day
+            );
+
+
+        date.setHours(0, 0, 0, 0);
+
+
+        return date;
+
+    }
+
+
+    // ==========================================
+    // LOAD JSON
+    // ==========================================
+
+    function loadBigRewards() {
+
+        fetch("data/scholarships.json")
+
+            .then(response => {
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        "Could not load scholarship data."
+                    );
+
+                }
+
+                return response.json();
+
+            })
+
+            .then(scholarships => {
+
+                const today =
+                    getToday();
+
+
+                // ==========================================
+                // FILTER BIG REWARD SCHOLARSHIPS
+                // AND REMOVE EXPIRED SCHOLARSHIPS
+                // ==========================================
+
+                const bigRewards =
+                    scholarships.filter(
+                        scholarship => {
+
+                            // Must be $10,000+
+
+                            const matchesAmount =
+                                Number(
+                                    scholarship.amountValue
+                                ) >= 10000;
+
+
+                            if (!matchesAmount) {
+                                return false;
+                            }
+
+
+                            // Parse deadline
+
+                            const deadlineDate =
+                                parseDeadline(
+                                    scholarship.deadline
+                                );
+
+
+                            /*
+                             * If the deadline cannot be parsed,
+                             * do not display the scholarship.
+                             */
+
+                            if (
+                                deadlineDate === null
+                            ) {
+
+                                return false;
+
+                            }
+
+
+                            /*
+                             * Deadline today = SHOW
+                             * Deadline tomorrow = SHOW
+                             * Deadline yesterday = HIDE
+                             */
+
+                            const matchesDeadline =
+                                deadlineDate.getTime() >=
+                                today.getTime();
+
+
+                            return matchesDeadline;
+
+                        }
+                    );
+
+
+                // Clear existing cards
+
+                bigRewardsGrid.innerHTML = "";
+
+
+                // ==========================================
+                // NO RESULTS
+                // ==========================================
+
+                if (
+                    bigRewards.length === 0
+                ) {
+
+                    bigRewardsGrid.innerHTML = `
+
+                        <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--gray);">
+
+                            <p>
+                                No big reward scholarships available at this time.
+                            </p>
+
+                        </div>
+
+                    `;
+
+                    return;
+
+                }
+
+
+                // ==========================================
+                // RENDER SCHOLARSHIPS
+                // ==========================================
+
+                bigRewards.forEach(
+                    scholarship => {
+
+                        const card =
+                            document.createElement("a");
+
+
+                        card.className =
+                            "scholarship-card featured-gold";
+
+
+                        card.href =
+                            "scholarships/" +
+                            scholarship.page;
+
+
+                        card.innerHTML = `
+
+                            <div class="card-top">
+
+                                <span class="amount gold-amount">
+
+                                    ${escapeHTML(
+                                        scholarship.amount
+                                    )}
+
+                                </span>
+
+
+                                <span class="deadline">
+
+                                    ${escapeHTML(
+                                        scholarship.badge ||
+                                        scholarship.deadline
+                                    )}
+
+                                </span>
+
+                            </div>
+
+
+                            <span class="big-award">
+
+                                ★ BIG AWARD
+
+                            </span>
+
+
+                            <h3>
+
+                                ${escapeHTML(
+                                    scholarship.name
+                                )}
+
+                            </h3>
+
+
+                            <p>
+
+                                ${escapeHTML(
+                                    scholarship.description
+                                )}
+
+                            </p>
+
+
+                            <span class="scholarship-link">
+
+                                View Scholarship
+
+                                <span>→</span>
+
+                            </span>
+
+                        `;
+
+
+                        bigRewardsGrid.appendChild(
+                            card
+                        );
+
+                    }
+                );
+
+            })
+
+            .catch(error => {
+
+                console.error(error);
+
                 bigRewardsGrid.innerHTML = `
+
                     <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--gray);">
-                        <p>No big reward scholarships available at this time.</p>
-                    </div>
-                `;
-                return;
-            }
 
-            // Render up to the first 3 or all of them depending on your layout design
-            bigRewards.forEach(scholarship => {
-                const card = document.createElement("a");
-                card.className = "scholarship-card featured-gold";
-                card.href = "scholarships/" + scholarship.page;
+                        <p>
+                            Unable to load featured scholarships.
+                        </p>
 
-                card.innerHTML = `
-                    <div class="card-top">
-                        <span class="amount gold-amount">
-                            ${escapeHTML(scholarship.amount)}
-                        </span>
-                        <span class="deadline">
-                            ${escapeHTML(scholarship.badge || scholarship.deadline)}
-                        </span>
                     </div>
 
-                    <span class="big-award">
-                        ★ BIG AWARD
-                    </span>
-
-                    <h3>
-                        ${escapeHTML(scholarship.name)}
-                    </h3>
-
-                    <p>
-                        ${escapeHTML(scholarship.description)}
-                    </p>
-
-                    <span class="scholarship-link">
-                        View Scholarship
-                        <span>→</span>
-                    </span>
                 `;
 
-                bigRewardsGrid.appendChild(card);
             });
-        })
-        .catch(error => {
-            console.error(error);
-            bigRewardsGrid.innerHTML = `
-                <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--gray);">
-                    <p>Unable to load featured scholarships.</p>
-                </div>
-            `;
-        });
+
+    }
+
+
+    // ==========================================
+    // BASIC HTML ESCAPING
+    // ==========================================
 
     function escapeHTML(value) {
+
         return String(value)
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#039;");
+
+            .replace(
+                /&/g,
+                "&amp;"
+            )
+
+            .replace(
+                /</g,
+                "&lt;"
+            )
+
+            .replace(
+                />/g,
+                "&gt;"
+            )
+
+            .replace(
+                /"/g,
+                "&quot;"
+            )
+
+            .replace(
+                /'/g,
+                "&#039;"
+            );
+
     }
+
+
+    // ==========================================
+    // AUTOMATIC DAILY REFRESH
+    // ==========================================
+    //
+    // If someone leaves the homepage open overnight,
+    // expired scholarships will automatically disappear
+    // after the date changes.
+    //
+    // ==========================================
+
+    function scheduleDailyRefresh() {
+
+        const now =
+            new Date();
+
+
+        const tomorrow =
+            new Date();
+
+
+        tomorrow.setDate(
+            tomorrow.getDate() + 1
+        );
+
+
+        tomorrow.setHours(
+            0,
+            0,
+            1,
+            0
+        );
+
+
+        const millisecondsUntilTomorrow =
+            tomorrow.getTime() -
+            now.getTime();
+
+
+        setTimeout(() => {
+
+            loadBigRewards();
+
+            scheduleDailyRefresh();
+
+        }, millisecondsUntilTomorrow);
+
+    }
+
+
+    // ==========================================
+    // INITIAL LOAD
+    // ==========================================
+
+    loadBigRewards();
+
+
+    // Start automatic daily refresh
+
+    scheduleDailyRefresh();
+
 </script>
 
-</body>
-</html>
