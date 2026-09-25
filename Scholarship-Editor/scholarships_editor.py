@@ -273,14 +273,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
     <div class="container header-content">
 
-        <a href="../index.html" class="logo">
+        <a href="./" class="logo">
             <span class="logo-icon">🎓</span>
             <span>Pea Ridge Scholarship Hub</span>
         </a>
 
         <nav>
 
-            <a href="../index.html">
+            <a href="./">
                 Home
             </a>
 
