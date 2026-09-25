@@ -309,7 +309,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         <div class="breadcrumb">
 
-            <a href="../index.html">
+            <a href="./">
                 Home
             </a>
 
