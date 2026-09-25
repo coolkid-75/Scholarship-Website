@@ -273,14 +273,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
     <div class="container header-content">
 
-        <a href="../" class="logo">
+        <a href="https://go.pearidgek12.com/scholarships" class="logo">
             <span class="logo-icon">🎓</span>
             <span>Pea Ridge Scholarship Hub</span>
         </a>
 
         <nav>
 
-            <a href="../">
+            <a href="https://go.pearidgek12.com/scholarships">
                 Home
             </a>
 
@@ -309,7 +309,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         <div class="breadcrumb">
 
-            <a href="../">
+            <a href="https://go.pearidgek12.com/scholarships">
                 Home
             </a>
 
