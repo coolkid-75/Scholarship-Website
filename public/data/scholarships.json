@@ -874,5 +874,65 @@
     "search": "Review It Scholarship $1000 gpa-based academic senior",
     "page": "review-it-scholarship.html",
     "applicationUrl": "https://studentscholarships.org/managed/review-it-scholarship"
+  },
+  {
+    "name": "Loran Scholars Scholarship",
+    "amount": "$100,000 [36 Awards]",
+    "amountValue": 100000,
+    "deadline": "October 15, 2026",
+    "badge": "Oct 15",
+    "description": "The Loran Award provides up to $100,000 over four years, combining undergraduate financial support with leadership development, mentorship, experiential learning, and a community of scholars.",
+    "eligibility": "1. Be entering university for the first time in September 2027. 2. Have a minimum cumulative average of 88%. 3. Hold Canadian citizenship or permanent resident status. 4. Be born between January 1, 2005 and September 1, 2011. 5. Meet the admission requirements of the participating Canadian university and undergraduate program. 6. To renew the award, maintain a B+ (77%) cumulative GPA under a full course load. 7. To renew the award, live independently, including in university residence during the first year. 8. To renew the award, demonstrate growth in character, service, and leadership.",
+    "search": "Loran Scholars Scholarship Award $100000 senior gpa-based canada leadership-based",
+    "page": "loran-scholars-scholarship.html",
+    "applicationUrl": "https://loranscholar.ca/the-program/how-to-apply/"
+  },
+  {
+    "name": "Taking Flight Scholarships",
+    "amount": "$5,000 [7 Awards]",
+    "amountValue": 5000,
+    "deadline": "October 30, 2026",
+    "badge": "Oct 30",
+    "description": "The Taking Flight Grants support Indigenous students pursuing education and training for careers connected to mineral extraction and processing. The program encourages students to explore opportunities in mining, trades, engineering, environmental studies, and other fields supporting mining communities.",
+    "eligibility": "1. Be Indigenous, including First Nations, Métis, or Inuit. 2. Be a permanent resident of Canada. 3. Be pursuing or planning to pursue studies related to the mineral extraction and processing industries. 4. Be a high school graduate continuing with a short course, completing high school requirements as an adult, attending college or CEGEP, attending trade school, or attending university. 5. Submit a completed application by the October deadline. 6. Provide the most recent academic transcript, with an unofficial transcript accepted. 7. Provide two recommendation and/or reference letters from teachers, Elders, or community leaders. 8. Submit a 400-word letter in English or the applicant's native language describing what working in the mining industry means to them and their significant accomplishments.",
+    "search": "Taking Flight Scholarships $5000 essay-based native american canada graduate",
+    "page": "taking-flight-scholarships.html",
+    "applicationUrl": "https://cimfoundation.ca/en/brian-and-harold-keevil-endowment-taking-flight-grants"
+  },
+  {
+    "name": "Excellence in Ag Scholarship",
+    "amount": "$16,000 [4 Awards]",
+    "amountValue": 16000,
+    "deadline": "November 15, 2026",
+    "badge": "Nov 15",
+    "description": "The Excellence in Ag Program supports students preparing for careers in agriculture and agribusiness through educational funding, practical industry experience, and opportunities to develop professional skills and connections.",
+    "eligibility": "1. Be entering or already enrolled in a diploma or degree program in agriculture or business. 2. Attend an accredited post-secondary institution. 3. Submit a completed and signed application form. 4. Submit a resume. 5. Provide proof of post-secondary enrollment or a conditional acceptance letter. 6. Submit an academic transcript. 7. Provide two reference letters from a teacher, principal, guidance counselor, supervisor, or mentor. 8. At least one reference must be from a work supervisor. 9. Submit a 500-word essay or video addressing one of the three specified topics: co-operatives and their impact on local communities, the future of agriculture in Western Canada, or a great coach/teacher and their leadership or mentorship qualities.",
+    "search": "Excellence in Ag Scholarship $16000 agriculture ffa business resume essay-based",
+    "page": "excellence-in-ag-scholarships.html",
+    "applicationUrl": "https://www.business.crs/articles/agro/grow/detail/excellence-in-ag-program"
+  },
+  {
+    "name": "Future Leaders in Technology Scholarship Fund",
+    "amount": "$2,000 [1 Award]",
+    "amountValue": 2000,
+    "deadline": "December 1, 2026",
+    "badge": "Dec 1",
+    "description": "The Future Leaders in Technology Scholarship Fund supports students pursuing undergraduate STEM degrees and encourages the development of future technology leaders through financial assistance and recognition of academic achievement, recommendations, and future goals.",
+    "eligibility": "1. Be pursuing an undergraduate degree in a STEM discipline. 2. Be a current student. 3. Applicants may apply from anywhere in the world. 4. Meet the selection criteria established by the Future Leaders in Technology Board of Directors. 5. Submit academic information, including GPA. 6. Provide standardized test scores. 7. Submit letters of recommendation. 8. Submit a compelling essay describing future goals.",
+    "search": "Future Leaders in Technology Scholarship Fund $2000 gpa-based STEM act sat essay-based",
+    "page": "future-leaders-in-technology-scholarship-fund.html",
+    "applicationUrl": "https://connect-community.org/future-leaders-of-it/"
+  },
+  {
+    "name": "Kochhar & Co. Scholarship",
+    "amount": "$1,000 [1 Award]",
+    "amountValue": 1000,
+    "deadline": "March 31, 2027",
+    "badge": "Mar 31",
+    "description": "The Kochhar & Co. Scholarship supports students across various fields of study while encouraging them to explore the important role accountants play in supporting companies or individuals through a structured essay.",
+    "eligibility": "1. Attend college or university on a full-time or part-time basis no later than September 2027. 2. Have achieved a GPA of 2.5 or greater during the last academic year. 3. Be a resident of Canada or the United States. 4. Submit an essay answering exactly one of the two provided questions. 5. Keep the essay under 1,000 words. 6. Submit the essay by 11:59 PM EST on the application deadline. 7. Follow basic formatting and grammar rules. 8. Include an introductory paragraph, several supporting body paragraphs, and a concluding paragraph. 9. Properly cite any quoted sources using MLA or APA formatting.",
+    "search": "Kochhar & Co. Scholarship $1000 gpa-based essay-based senior",
+    "page": "kochhar-&-co-scholarship.html",
+    "applicationUrl": "https://kochharandco.ca/application"
   }
 ]

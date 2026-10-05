@@ -874,5 +874,29 @@
     "search": "Review It Scholarship $1000 gpa-based academic senior",
     "page": "review-it-scholarship.html",
     "applicationUrl": "https://studentscholarships.org/managed/review-it-scholarship"
+  },
+  {
+    "name": "Loran Scholars Scholarship",
+    "amount": "$100,000 [36 Awards]",
+    "amountValue": 100000,
+    "deadline": "October 15, 2026",
+    "badge": "Oct 15",
+    "description": "The Loran Award provides up to $100,000 over four years, combining undergraduate financial support with leadership development, mentorship, experiential learning, and a community of scholars.",
+    "eligibility": "1. Be entering university for the first time in September 2027. 2. Have a minimum cumulative average of 88%. 3. Hold Canadian citizenship or permanent resident status. 4. Be born between January 1, 2005 and September 1, 2011. 5. Meet the admission requirements of the participating Canadian university and undergraduate program. 6. To renew the award, maintain a B+ (77%) cumulative GPA under a full course load. 7. To renew the award, live independently, including in university residence during the first year. 8. To renew the award, demonstrate growth in character, service, and leadership.",
+    "search": "Loran Scholars Scholarship Award $100000 senior gpa-based canada leadership-based",
+    "page": "loran-scholars-scholarship.html",
+    "applicationUrl": "https://loranscholar.ca/the-program/how-to-apply/"
+  },
+  {
+    "name": "Taking Flight Scholarships",
+    "amount": "$5,000 [7 Awards]",
+    "amountValue": 5000,
+    "deadline": "October 30, 2026",
+    "badge": "Oct 30",
+    "description": "The Taking Flight Grants support Indigenous students pursuing education and training for careers connected to mineral extraction and processing. The program encourages students to explore opportunities in mining, trades, engineering, environmental studies, and other fields supporting mining communities.",
+    "eligibility": "1. Be Indigenous, including First Nations, Métis, or Inuit. 2. Be a permanent resident of Canada. 3. Be pursuing or planning to pursue studies related to the mineral extraction and processing industries. 4. Be a high school graduate continuing with a short course, completing high school requirements as an adult, attending college or CEGEP, attending trade school, or attending university. 5. Submit a completed application by the October deadline. 6. Provide the most recent academic transcript, with an unofficial transcript accepted. 7. Provide two recommendation and/or reference letters from teachers, Elders, or community leaders. 8. Submit a 400-word letter in English or the applicant's native language describing what working in the mining industry means to them and their significant accomplishments.",
+    "search": "Taking Flight Scholarships $5000 essay-based native american canada graduate",
+    "page": "taking-flight-scholarships.html",
+    "applicationUrl": "https://cimfoundation.ca/en/brian-and-harold-keevil-endowment-taking-flight-grants"
   }
 ]
