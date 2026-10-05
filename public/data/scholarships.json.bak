@@ -898,5 +898,41 @@
     "search": "Taking Flight Scholarships $5000 essay-based native american canada graduate",
     "page": "taking-flight-scholarships.html",
     "applicationUrl": "https://cimfoundation.ca/en/brian-and-harold-keevil-endowment-taking-flight-grants"
+  },
+  {
+    "name": "Excellence in Ag Scholarship",
+    "amount": "$16,000 [4 Awards]",
+    "amountValue": 16000,
+    "deadline": "November 15, 2026",
+    "badge": "Nov 15",
+    "description": "The Excellence in Ag Program supports students preparing for careers in agriculture and agribusiness through educational funding, practical industry experience, and opportunities to develop professional skills and connections.",
+    "eligibility": "1. Be entering or already enrolled in a diploma or degree program in agriculture or business. 2. Attend an accredited post-secondary institution. 3. Submit a completed and signed application form. 4. Submit a resume. 5. Provide proof of post-secondary enrollment or a conditional acceptance letter. 6. Submit an academic transcript. 7. Provide two reference letters from a teacher, principal, guidance counselor, supervisor, or mentor. 8. At least one reference must be from a work supervisor. 9. Submit a 500-word essay or video addressing one of the three specified topics: co-operatives and their impact on local communities, the future of agriculture in Western Canada, or a great coach/teacher and their leadership or mentorship qualities.",
+    "search": "Excellence in Ag Scholarship $16000 agriculture ffa business resume essay-based",
+    "page": "excellence-in-ag-scholarships.html",
+    "applicationUrl": "https://www.business.crs/articles/agro/grow/detail/excellence-in-ag-program"
+  },
+  {
+    "name": "Future Leaders in Technology Scholarship Fund",
+    "amount": "$2,000 [1 Award]",
+    "amountValue": 2000,
+    "deadline": "December 1, 2026",
+    "badge": "Dec 1",
+    "description": "The Future Leaders in Technology Scholarship Fund supports students pursuing undergraduate STEM degrees and encourages the development of future technology leaders through financial assistance and recognition of academic achievement, recommendations, and future goals.",
+    "eligibility": "1. Be pursuing an undergraduate degree in a STEM discipline. 2. Be a current student. 3. Applicants may apply from anywhere in the world. 4. Meet the selection criteria established by the Future Leaders in Technology Board of Directors. 5. Submit academic information, including GPA. 6. Provide standardized test scores. 7. Submit letters of recommendation. 8. Submit a compelling essay describing future goals.",
+    "search": "Future Leaders in Technology Scholarship Fund $2000 gpa-based STEM act sat essay-based",
+    "page": "future-leaders-in-technology-scholarship-fund.html",
+    "applicationUrl": "https://connect-community.org/future-leaders-of-it/"
+  },
+  {
+    "name": "Kochhar & Co. Scholarship",
+    "amount": "$1,000 [1 Award]",
+    "amountValue": 1000,
+    "deadline": "March 31, 2027",
+    "badge": "Mar 31",
+    "description": "The Kochhar & Co. Scholarship supports students across various fields of study while encouraging them to explore the important role accountants play in supporting companies or individuals through a structured essay.",
+    "eligibility": "1. Attend college or university on a full-time or part-time basis no later than September 2027. 2. Have achieved a GPA of 2.5 or greater during the last academic year. 3. Be a resident of Canada or the United States. 4. Submit an essay answering exactly one of the two provided questions. 5. Keep the essay under 1,000 words. 6. Submit the essay by 11:59 PM EST on the application deadline. 7. Follow basic formatting and grammar rules. 8. Include an introductory paragraph, several supporting body paragraphs, and a concluding paragraph. 9. Properly cite any quoted sources using MLA or APA formatting.",
+    "search": "Kochhar & Co. Scholarship $1000 gpa-based essay-based senior",
+    "page": "kochhar-&-co-scholarship.html",
+    "applicationUrl": "https://kochharandco.ca/application"
   }
 ]
