@@ -1,0 +1,868 @@
+<title>FAFSA Step-By-Step | Pea Ridge Scholarship Hub</title>
+
+<style>
+    :root {
+        --black: #090909;
+        --dark-black: #111111;
+        --red: #b5121b;
+        --bright-red: #d71920;
+        --white: #ffffff;
+        --gray: #d9d9d9;
+        --dark-gray: #242424;
+        --gold: #d4af37;
+        --light-gold: #f3d675;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--black);
+        color: var(--white);
+        min-height: 100vh;
+    }
+
+    /* =========================
+        HEADER
+    ========================= */
+
+    header {
+        background: var(--dark-black);
+        border-bottom: 3px solid var(--red);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .nav-container {
+        max-width: 1400px;
+        margin: auto;
+        padding: 18px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        text-decoration: none;
+        color: var(--white);
+    }
+
+    .logo-area img {
+        width: 55px;
+        height: 55px;
+        object-fit: contain;
+    }
+
+    .logo-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo-text strong {
+        font-size: 21px;
+        letter-spacing: 1px;
+    }
+
+    .logo-text span {
+        font-size: 11px;
+        color: var(--gold);
+        letter-spacing: 2px;
+        margin-top: 3px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    nav a {
+        color: var(--white);
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 10px 16px;
+        border-radius: 4px;
+        transition: 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+        background: var(--red);
+    }
+
+    /* =========================
+        HERO
+    ========================= */
+
+    .hero {
+        background:
+            linear-gradient(
+                rgba(9, 9, 9, 0.88),
+                rgba(9, 9, 9, 0.95)
+            ),
+            radial-gradient(
+                circle at center,
+                #2b0b0e 0%,
+                #090909 65%
+            );
+
+        padding: 70px 30px 60px;
+        text-align: center;
+        border-bottom: 1px solid var(--dark-gray);
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 6vw, 68px);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+        color: var(--red);
+    }
+
+    .hero p {
+        max-width: 800px;
+        margin: auto;
+        color: var(--gray);
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    /* =========================
+        MAIN CONTENT
+    ========================= */
+
+    main {
+        max-width: 950px;
+        margin: auto;
+        padding: 60px 30px 90px;
+    }
+
+    .intro {
+        color: var(--gray);
+        font-size: 17px;
+        line-height: 1.8;
+        margin-bottom: 55px;
+    }
+
+    .step {
+        margin-bottom: 55px;
+        padding-bottom: 45px;
+        border-bottom: 1px solid var(--dark-gray);
+    }
+
+    .step:last-child {
+        border-bottom: none;
+    }
+
+    .step-number {
+        color: var(--gold);
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+    }
+
+    .step h2 {
+        color: var(--white);
+        font-size: 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 22px;
+    }
+
+    .step h3 {
+        color: var(--light-gold);
+        font-size: 19px;
+        margin: 28px 0 10px;
+    }
+
+    .step p {
+        color: var(--gray);
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 16px;
+    }
+
+    .step strong {
+        color: var(--white);
+    }
+
+    .step ul {
+        margin: 15px 0 20px 25px;
+        color: var(--gray);
+    }
+
+    .step li {
+        margin-bottom: 10px;
+        line-height: 1.7;
+    }
+
+    .important {
+        border-left: 4px solid var(--red);
+        padding: 15px 20px;
+        margin: 25px 0;
+        background: var(--dark-black);
+    }
+
+    .important p {
+        margin: 0;
+    }
+
+    .link-button {
+        display: inline-block;
+        margin-top: 10px;
+        background: var(--red);
+        color: var(--white);
+        text-decoration: none;
+        font-weight: bold;
+        padding: 12px 22px;
+        border-radius: 4px;
+        transition: 0.2s ease;
+    }
+
+    .link-button:hover {
+        background: var(--bright-red);
+        transform: translateY(-2px);
+    }
+
+    /* =========================
+        FOOTER
+    ========================= */
+
+    footer {
+        background: var(--dark-black);
+        border-top: 3px solid var(--red);
+        padding: 35px 30px;
+        text-align: center;
+    }
+
+    footer p {
+        color: var(--gray);
+        font-size: 14px;
+    }
+
+    footer strong {
+        color: var(--white);
+    }
+
+    /* =========================
+        RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+        .nav-container {
+            flex-direction: column;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 650px) {
+        .hero {
+            padding: 55px 20px;
+        }
+
+        main {
+            padding: 40px 20px 60px;
+        }
+
+        .nav-container {
+            padding: 15px;
+        }
+
+        nav a {
+            padding: 8px 10px;
+            font-size: 13px;
+        }
+
+        .step h2 {
+            font-size: 25px;
+        }
+
+        .step p {
+            font-size: 15px;
+        }
+    }
+</style>
+
+</head> <body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+    <div class="nav-container">
+
+        <a href="https://go.pearidgek12.com/scholarships" class="logo-area">
+            <img src="images/blackhawk-logo.png" alt="Pea Ridge Blackhawks">
+
+            <div class="logo-text">
+                <strong>PEA RIDGE</strong>
+                <span>SCHOLARSHIP HUB</span>
+            </div>
+        </a>
+
+        <nav>
+            <a href="https://go.pearidgek12.com/scholarships">Home</a>
+            <a href="scholarships.html">Scholarships</a>
+            <a href="tips.html">Tips</a>
+            <a href="fafsa-guide.html">FAFSA</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+    <h1>
+        FAFSA <span>Step-By-Step</span>
+    </h1>
+
+    <p>
+        A simple guide to help you complete your FAFSA form
+        and apply for federal student aid.
+    </p>
+</section>
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<main>
+
+    <p class="intro">
+        The FAFSA can seem overwhelming the first time you complete it.
+        The guide below walks you through the major sections of the FAFSA
+        in the order you will encounter them. Take your time, read each
+        question carefully, and review your answers before submitting.
+    </p>
+
+    <!-- STEP 1 -->
+
+    <section class="step">
+
+        <div class="step-number">Step 01</div>
+
+        <h2>Student Identity Information</h2>
+
+        <p>
+            To start your FAFSA form, go to
+            <strong>FAFSA.gov</strong> and select
+            <strong>“Start New Form.”</strong>
+        </p>
+
+        <p>
+            If you are not logged in to your StudentAid.gov account,
+            you will be taken to the login page. Enter your username
+            and password, then select the school year for which you
+            are applying for aid.
+        </p>
+
+        <p>
+            The first question will ask who is starting the FAFSA form.
+            Select <strong>“Student.”</strong> Then select
+            <strong>“Start FAFSA Form.”</strong>
+        </p>
+
+        <p>
+            You will be taken to the <strong>Student Identity Information</strong>
+            page. Review the personal information shown on the page,
+            including your name, date of birth, Social Security number,
+            email address, phone number, and permanent mailing address.
+        </p>
+
+        <p>
+            Make sure this information is correct. If you need to change
+            something, update it through your StudentAid.gov account settings.
+        </p>
+
+        <p>
+            You will also select your state of residence. Usually, this is
+            the state where you live when you are not attending college,
+            career school, or trade school. You will also provide the month
+            and year you became a resident of that state. If you do not know
+            the exact date, you can provide your best estimate.
+        </p>
+
+        <div class="important">
+            <p>
+                <strong>Important:</strong> You must provide consent and
+                approval for your federal tax information to be transferred
+                from the IRS into your FAFSA form. Even if you did not file
+                taxes, you must provide consent and approval to be eligible
+                for federal student aid.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- STEP 2 -->
+
+    <section class="step">
+
+        <div class="step-number">Step 02</div>
+
+        <h2>Background</h2>
+
+        <p>
+            This section asks questions that help determine your dependency
+            status and eligibility for federal student aid.
+        </p>
+
+        <p>
+            You will answer questions about your marital status and your
+            plans for college, career school, or trade school.
+        </p>
+
+        <p>
+            On the <strong>Student Personal Circumstances</strong> page,
+            select all of the circumstances that apply to you. If none
+            apply, select <strong>“None of these apply.”</strong>
+        </p>
+
+        <p>
+            You may also be asked about your living situation. If you
+            indicate that you were homeless or at risk of becoming homeless,
+            the FAFSA may ask additional questions about who determined
+            your status.
+        </p>
+
+        <p>
+            If none of the listed circumstances apply and you do not meet
+            the other requirements for independent student status, you may
+            be asked whether unusual circumstances prevent you from
+            contacting your parents.
+        </p>
+
+        <p>
+            Students with unusual circumstances may be able to submit the
+            FAFSA without parent information.
+        </p>
+
+        <h3>Dependent Students</h3>
+
+        <p>
+            If the FAFSA determines that you are a dependent student,
+            you may be asked whether your parents are refusing to provide
+            their information on the FAFSA.
+        </p>
+
+        <p>
+            Select <strong>“Yes”</strong> only if your parent or parents
+            actually refuse to participate. Submitting the FAFSA without
+            parent information because they refuse to participate generally
+            means you will not qualify for a Federal Pell Grant or most
+            other federal student aid. You may be eligible for a Direct
+            Unsubsidized Loan.
+        </p>
+
+        <div class="important">
+            <p>
+                Your dependency status is determined by federal student aid
+                rules. It is not simply based on whether you live with your
+                parents, receive financial support from them, or are claimed
+                as a dependent on their taxes.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- STEP 3 -->
+
+    <section class="step">
+
+        <div class="step-number">Step 03</div>
+
+        <h2>Demographics</h2>
+
+        <p>
+            This section asks questions about your background and, when
+            applicable, your parents' background.
+        </p>
+
+        <p>
+            You will be asked about your sex, race, and ethnicity. These
+            answers are used for research purposes and do not determine
+            your eligibility for federal student aid.
+        </p>
+
+        <p>
+            You will also be asked about your citizenship status. To receive
+            federal student aid, you generally must be a U.S. citizen or
+            an eligible noncitizen.
+        </p>
+
+        <p>
+            Next, you will answer questions about your parents' education
+            history. If you are unsure about an answer, select
+            <strong>“Don't know.”</strong>
+        </p>
+
+        <p>
+            You may also be asked whether a parent or guardian was killed
+            in the line of duty while serving in the U.S. armed forces or
+            while performing official duties as a public safety officer.
+        </p>
+
+        <h3>High School Information</h3>
+
+        <p>
+            You will select your high school completion status. If you have
+            or will have a high school diploma, you will provide information
+            about your high school.
+        </p>
+
+        <p>
+            Enter your high school's state, city, and name to search for
+            your school. Select the correct school from the search results.
+        </p>
+
+        <p>
+            If you completed or will complete a GED or another state-
+            recognized high school equivalent, select the appropriate
+            completion status and provide the type and issuing state.
+        </p>
+
+    </section>
+
+    <!-- STEP 4 -->
+
+    <section class="step">
+
+        <div class="step-number">Step 04</div>
+
+        <h2>Financials</h2>
+
+        <p>
+            The Financials section asks for information that helps determine
+            your eligibility for financial aid. The questions you see will
+            depend on whether you are a dependent or independent student.
+        </p>
+
+        <h3>Dependent Students</h3>
+
+        <p>
+            You will answer questions about your tax filing status and other
+            financial information.
+        </p>
+
+        <p>
+            Because you provided consent and approval for your tax
+            information to be transferred from the IRS, some federal tax
+            information may already be available through the FAFSA process.
+            You may still need to complete other financial fields.
+        </p>
+
+        <p>
+            Enter <strong>your own financial information</strong> when the
+            FAFSA asks for student information. Your parent will provide
+            their financial information in their portion of the FAFSA.
+        </p>
+
+        <p>
+            If the answer to a question is zero or does not apply to you,
+            enter <strong>0</strong>. Do not leave required financial
+            questions blank.
+        </p>
+
+        <h3>Assets</h3>
+
+        <p>
+            You may be asked about your current cash, savings, and checking
+            account balances.
+        </p>
+
+        <p>
+            You may also need to report the net worth of certain investments,
+            including real estate, businesses, and income-producing farms.
+            Follow the FAFSA instructions carefully about which assets to
+            report.
+        </p>
+
+        <p>
+            Retirement accounts generally should not be reported as the
+            investment assets requested in this section.
+        </p>
+
+        <h3>Independent Students</h3>
+
+        <p>
+            Independent students may be asked about federal benefits received
+            by themselves or members of their family, tax filing status,
+            family size, and the number of family members attending college.
+        </p>
+
+        <p>
+            Independent students may also be asked about child support
+            received and their assets.
+        </p>
+
+        <div class="important">
+            <p>
+                If your current financial situation has changed significantly
+                and the information on your FAFSA does not accurately reflect
+                your family's circumstances, submit the FAFSA first and then
+                contact your school's financial aid office about a possible
+                financial aid adjustment.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- STEP 5 -->
+
+    <section class="step">
+
+        <div class="step-number">Step 05</div>
+
+        <h2>Colleges and Career Schools</h2>
+
+        <p>
+            In this section, select the colleges, universities, career
+            schools, or trade schools you are considering or planning to
+            attend.
+        </p>
+
+        <p>
+            The schools you list will receive your FAFSA information and
+            can use it to determine the types and amounts of student aid
+            you may qualify for.
+        </p>
+
+        <p>
+            You must add at least <strong>one school</strong> to your FAFSA.
+            You can add up to <strong>20 schools</strong>.
+        </p>
+
+        <p>
+            Include schools you are seriously considering, even if you are
+            not sure whether you will ultimately attend them.
+        </p>
+
+        <p>
+            You can search for schools by entering the school's name or
+            federal school code and selecting <strong>“Search.”</strong>
+            You can also search by location.
+        </p>
+
+        <p>
+            Select the correct school from the search results. Repeat the
+            process until you have added all of the schools you want to
+            receive your FAFSA information.
+        </p>
+
+        <p>
+            For federal student aid purposes, the order in which you list
+            schools generally does not matter. However, some states have
+            specific requirements for the order of schools when determining
+            eligibility for state aid.
+        </p>
+
+    </section>
+
+    <!-- STEP 6 -->
+
+    <section class="step">
+
+        <div class="step-number">Step 06</div>
+
+        <h2>Invite a Parent or Spouse</h2>
+
+        <p>
+            If the FAFSA determines that you are a dependent student,
+            you will generally need to invite a legal parent to participate
+            in your FAFSA.
+        </p>
+
+        <p>
+            If that parent is married and did not file taxes jointly with
+            their spouse, the FAFSA may also require the parent's spouse
+            to participate.
+        </p>
+
+        <p>
+            If you are an independent student and are married but did not
+            file taxes jointly with your current spouse, you may need to
+            invite your spouse.
+        </p>
+
+        <h3>How to Invite a Parent or Spouse</h3>
+
+        <p>
+            Enter the person's email address and select
+            <strong>“Send Invite.”</strong>
+        </p>
+
+        <p>
+            After confirming the email address, the person will receive
+            an invitation to participate in your FAFSA.
+        </p>
+
+        <p>
+            You may also receive an invitation link and code that you can
+            share directly with your parent or spouse.
+        </p>
+
+        <div class="important">
+            <p>
+                <strong>Important:</strong> Your parent or spouse will need
+                their own StudentAid.gov account to access, complete, and
+                sign their portion of your FAFSA.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- STEP 7 -->
+
+    <section class="step">
+
+        <div class="step-number">Step 07</div>
+
+        <h2>Review and Sign</h2>
+
+        <p>
+            You are at the final section of the FAFSA. Before signing,
+            carefully review all of your answers.
+        </p>
+
+        <p>
+            You can select <strong>“Expand All”</strong> to review all of
+            your responses or review each section individually.
+        </p>
+
+        <p>
+            If you find an incorrect answer, select the question's link
+            to return to that section and make the correction.
+        </p>
+
+        <p>
+            If you invited a parent or spouse, review the contributor
+            information and check the status of their invitation and
+            required sections.
+        </p>
+
+        <h3>Sign Your FAFSA</h3>
+
+        <p>
+            Once you have confirmed that your information is accurate,
+            review the terms and conditions of the FAFSA.
+        </p>
+
+        <p>
+            Select the required checkbox to agree to the terms and then
+            complete your electronic signature.
+        </p>
+
+        <div class="important">
+            <p>
+                If a parent or spouse is required to participate in your
+                FAFSA, they must complete and sign their required sections
+                before the FAFSA can be fully submitted.
+            </p>
+        </div>
+
+        <h3>Submit Your FAFSA</h3>
+
+        <p>
+            When everything is complete, select
+            <strong>“Submit FAFSA Form.”</strong>
+        </p>
+
+        <p>
+            Congratulations! You have completed your FAFSA.
+        </p>
+
+        <p>
+            Many FAFSA forms are processed quickly, although some may take
+            additional time. Once your FAFSA is processed, you will receive
+            information about your FAFSA Submission Summary.
+        </p>
+
+        <p>
+            Review your FAFSA Submission Summary carefully. It may contain
+            important information about your estimated aid eligibility,
+            corrections you need to make, or whether your FAFSA was selected
+            for verification.
+        </p>
+
+    </section>
+
+    <!-- FINAL SECTION -->
+
+    <section class="step">
+
+        <div class="step-number">After Submission</div>
+
+        <h2>What's Next?</h2>
+
+        <p>
+            Completing the FAFSA is an important step, but your financial
+            aid process may not be finished yet.
+        </p>
+
+        <p>
+            Watch your email and StudentAid.gov account for updates.
+            Colleges may also contact you if they need additional
+            information or documentation.
+        </p>
+
+        <p>
+            When you receive financial aid offers from colleges, carefully
+            compare grants, scholarships, work-study, and loans.
+        </p>
+
+        <p>
+            If you have questions about your financial aid offer or believe
+            your financial circumstances are not accurately represented,
+            contact the financial aid office at the school.
+        </p>
+
+        <a
+            href="https://studentaid.gov/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-button"
+        >
+            Visit StudentAid.gov
+        </a>
+
+    </section>
+
+</main>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+    <p>
+        © 2026 <strong>Pea Ridge Scholarship Hub</strong>
+    </p>
+</footer>

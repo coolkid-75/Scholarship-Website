@@ -1,0 +1,731 @@
+<title>FAFSA Guide | Pea Ridge Scholarship Hub</title>
+
+<style>
+    :root {
+        --black: #090909;
+        --dark-black: #111111;
+        --red: #b5121b;
+        --bright-red: #d71920;
+        --white: #ffffff;
+        --off-white: #f5f5f5;
+        --gray: #d9d9d9;
+        --dark-gray: #242424;
+        --gold: #d4af37;
+        --light-gold: #f3d675;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--black);
+        color: var(--white);
+        min-height: 100vh;
+    }
+
+    /* =========================
+        HEADER
+    ========================= */
+
+    header {
+        background: var(--dark-black);
+        border-bottom: 3px solid var(--red);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .nav-container {
+        max-width: 1400px;
+        margin: auto;
+        padding: 18px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        text-decoration: none;
+        color: var(--white);
+    }
+
+    .logo-area img {
+        width: 55px;
+        height: 55px;
+        object-fit: contain;
+    }
+
+    .logo-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo-text strong {
+        font-size: 21px;
+        letter-spacing: 1px;
+    }
+
+    .logo-text span {
+        font-size: 11px;
+        color: var(--gold);
+        letter-spacing: 2px;
+        margin-top: 3px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    nav a {
+        color: var(--white);
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 10px 16px;
+        border-radius: 4px;
+        transition: 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+        background: var(--red);
+    }
+
+    /* =========================
+        HERO
+    ========================= */
+
+    .hero {
+        background:
+            linear-gradient(
+                rgba(9, 9, 9, 0.88),
+                rgba(9, 9, 9, 0.95)
+            ),
+            radial-gradient(
+                circle at center,
+                #2b0b0e 0%,
+                #090909 65%
+            );
+
+        padding: 80px 30px 70px;
+        text-align: center;
+        border-bottom: 1px solid var(--dark-gray);
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 6vw, 72px);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+        color: var(--red);
+    }
+
+    .hero p {
+        max-width: 800px;
+        margin: auto;
+        color: var(--gray);
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    /* =========================
+        MAIN CONTENT
+    ========================= */
+
+    main {
+        max-width: 1200px;
+        margin: auto;
+        padding: 60px 30px 90px;
+    }
+
+    .section-title {
+        font-size: 32px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .section-title span {
+        color: var(--gold);
+    }
+
+    .guide-section {
+        margin-bottom: 60px;
+    }
+
+    .guide-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .guide-card {
+        background: var(--dark-black);
+        border: 1px solid var(--dark-gray);
+        border-top: 4px solid var(--red);
+        padding: 30px;
+        position: relative;
+        transition: transform 0.25s ease,
+                    border-color 0.25s ease,
+                    box-shadow 0.25s ease;
+    }
+
+    .guide-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--gold);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+    }
+
+    .guide-card h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .guide-card h3 span {
+        color: var(--gold);
+        font-size: 24px;
+    }
+
+    .guide-card p {
+        color: var(--gray);
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    /* =========================
+        CARD ACTION BUTTON
+    ========================= */
+
+    .card-action {
+        margin-top: 25px;
+        text-align: left;
+    }
+
+    .card-action .fafsa-button {
+        display: inline-block;
+        background: var(--red);
+        color: var(--white);
+        text-decoration: none;
+        font-weight: bold;
+        padding: 12px 20px;
+        border-radius: 4px;
+        transition: 0.2s ease;
+    }
+
+    .card-action .fafsa-button:hover {
+        background: var(--bright-red);
+        transform: translateY(-2px);
+    }
+
+    /* =========================
+        IMPORTANT INFO BOX
+    ========================= */
+
+    .info-box {
+        background: var(--dark-black);
+        border: 1px solid var(--gold);
+        border-left: 5px solid var(--gold);
+        padding: 30px;
+        margin-bottom: 60px;
+    }
+
+    .info-box h2 {
+        color: var(--gold);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+
+    .info-box p {
+        color: var(--gray);
+        line-height: 1.8;
+        font-size: 15px;
+    }
+
+    /* =========================
+        FAFSA BUTTON
+    ========================= */
+
+    .fafsa-action {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .fafsa-button {
+        display: inline-block;
+        background: var(--red);
+        color: var(--white);
+        text-decoration: none;
+        font-weight: bold;
+        padding: 14px 28px;
+        border-radius: 4px;
+        transition: 0.2s ease;
+    }
+
+    .fafsa-button:hover {
+        background: var(--bright-red);
+        transform: translateY(-2px);
+    }
+
+    /* =========================
+        CHECKLIST
+    ========================= */
+
+    .checklist {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .check-item {
+        background: var(--dark-black);
+        border: 1px solid var(--dark-gray);
+        padding: 18px 20px;
+        color: var(--gray);
+        line-height: 1.6;
+    }
+
+    .check-item strong {
+        color: var(--white);
+    }
+
+    .check-item::before {
+        content: "✓";
+        color: var(--gold);
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    /* =========================
+        FOOTER
+    ========================= */
+
+    footer {
+        background: var(--dark-black);
+        border-top: 3px solid var(--red);
+        padding: 35px 30px;
+        text-align: center;
+    }
+
+    footer p {
+        color: var(--gray);
+        font-size: 14px;
+    }
+
+    footer strong {
+        color: var(--white);
+    }
+
+    /* =========================
+        RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+        .guide-grid,
+        .checklist {
+            grid-template-columns: 1fr;
+        }
+
+        .nav-container {
+            flex-direction: column;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 650px) {
+        .hero {
+            padding: 60px 20px;
+        }
+
+        main {
+            padding: 40px 20px 60px;
+        }
+
+        .logo-area {
+            text-align: center;
+        }
+
+        .nav-container {
+            padding: 15px;
+        }
+
+        nav a {
+            padding: 8px 10px;
+            font-size: 13px;
+        }
+
+        .section-title {
+            font-size: 27px;
+        }
+    }
+</style>
+
+</head> <body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+    <div class="nav-container">
+
+        <a href="https://go.pearidgek12.com/scholarships" class="logo-area">
+            <img src="images/blackhawk-logo.png" alt="Pea Ridge Blackhawks">
+
+            <div class="logo-text">
+                <strong>PEA RIDGE</strong>
+                <span>SCHOLARSHIP HUB</span>
+            </div>
+        </a>
+
+        <nav>
+            <a href="https://go.pearidgek12.com/scholarships">Home</a>
+            <a href="scholarships.html">Scholarships</a>
+            <a href="tips.html">Tips</a>
+            <a href="fafsa-guide.html" class="active">FAFSA</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+    <h1>
+        FAFSA <span>Guide</span>
+    </h1>
+
+    <p>
+        Learn what the FAFSA is, what you need to complete it,
+        and how filing early can help you access financial aid for college.
+    </p>
+</section>
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<main>
+
+    <!-- FAFSA INTRODUCTION -->
+
+    <section class="guide-section">
+
+        <h2 class="section-title">
+            What Is <span>FAFSA?</span>
+        </h2>
+
+        <div class="info-box">
+
+            <h2>Free Application for Federal Student Aid</h2>
+
+            <p>
+                The FAFSA is the application students use to apply for
+                federal financial aid for college or career school. Many
+                states and colleges also use information from the FAFSA
+                when determining eligibility for their own financial aid.
+                Completing the FAFSA can help you find grants, scholarships,
+                work-study opportunities, and student loans.
+            </p>
+
+            <div class="fafsa-action">
+                <a
+                    href="https://studentaid.gov/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="fafsa-button"
+                >
+                    Visit Federal Student Aid
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BEFORE YOU START -->
+
+    <section class="guide-section">
+
+        <h2 class="section-title">
+            Before You <span>Start</span>
+        </h2>
+
+        <div class="guide-grid">
+
+            <div class="guide-card">
+                <h3><span>01.</span> Create Your FSA ID</h3>
+
+                <p>
+                    Students generally need a StudentAid.gov account
+                    to access and complete the FAFSA. If a parent or
+                    contributor needs to provide information, they may
+                    need their own account as well.
+                </p>
+            </div>
+
+            <div class="guide-card">
+                <h3><span>02.</span> Gather Your Information</h3>
+
+                <p>
+                    Have the information needed to complete the application
+                    available before you begin. This may include tax
+                    information, records of assets, Social Security
+                    information, and details about the colleges you are
+                    considering.
+                </p>
+            </div>
+
+            <div class="guide-card">
+                <h3><span>03.</span> Know Your Colleges</h3>
+
+                <p>
+                    Add the colleges or career schools you are considering
+                    to your FAFSA so they can receive your FAFSA information
+                    and use it when determining your financial aid eligibility.
+                </p>
+            </div>
+
+            <div class="guide-card">
+                <h3><span>04.</span> Understand Contributors</h3>
+
+                <p>
+                    Depending on your circumstances, a parent or another
+                    contributor may need to provide information on the FAFSA.
+                    Make sure everyone who needs to participate understands
+                    their role before you begin.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- HOW TO COMPLETE -->
+
+    <section class="guide-section">
+
+        <h2 class="section-title">
+            Completing the <span>FAFSA</span>
+        </h2>
+
+        <div class="guide-grid">
+
+            <div class="guide-card">
+              <h3><span>01.</span> Complete Every Section</h3>
+
+              <p>
+                  Carefully work through the FAFSA and answer each question
+                  that applies to you. Read the instructions closely and
+                  double-check your answers before moving forward.
+              </p>
+
+              <div class="card-action">
+                  <a href="fafsa-step-by-step.html" class="fafsa-button">
+                      FAFSA Step-By-Step
+                  </a>
+              </div>
+        </div>
+
+            <div class="guide-card">
+                <h3><span>02.</span> Review Your Information</h3>
+
+                <p>
+                    Before submitting, review names, dates, financial
+                    information, school selections, and other important
+                    details. Mistakes can create delays or require corrections.
+                </p>
+            </div>
+
+            <div class="guide-card">
+                <h3><span>03.</span> Submit Your FAFSA</h3>
+
+                <p>
+                    Complete the required signatures and submit your FAFSA.
+                    Save confirmation information and keep copies of important
+                    records for your files.
+                </p>
+            </div>
+
+            <div class="guide-card">
+                <h3><span>04.</span> Watch for Follow-Up</h3>
+
+                <p>
+                    Check your StudentAid.gov account and email for updates.
+                    Your college may also contact you if additional documents
+                    or information are needed before your financial aid can
+                    be finalized.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FAFSA CHECKLIST -->
+
+    <section class="guide-section">
+
+        <h2 class="section-title">
+            FAFSA <span>Checklist</span>
+        </h2>
+
+        <div class="checklist">
+
+            <div class="check-item">
+                <strong>StudentAid.gov account:</strong>
+                Make sure the student has the necessary account credentials.
+            </div>
+
+            <div class="check-item">
+                <strong>Parent or contributor information:</strong>
+                Make sure required contributors are prepared to participate.
+            </div>
+
+            <div class="check-item">
+                <strong>Tax information:</strong>
+                Have the financial information needed for the application available.
+            </div>
+
+            <div class="check-item">
+                <strong>College list:</strong>
+                Know which schools should receive your FAFSA information.
+            </div>
+
+            <div class="check-item">
+                <strong>Important records:</strong>
+                Keep copies of confirmation numbers and other FAFSA records.
+            </div>
+
+            <div class="check-item">
+                <strong>Deadlines:</strong>
+                Check federal, state, and college-specific financial aid deadlines.
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- AFTER FAFSA -->
+
+    <section class="guide-section">
+
+        <h2 class="section-title">
+            After You <span>Submit</span>
+        </h2>
+
+        <div class="guide-grid">
+
+            <div class="guide-card">
+                <h3><span>01.</span> Review Your FAFSA Information</h3>
+
+                <p>
+                    Keep an eye on your StudentAid.gov account for updates,
+                    notifications, and information about the status of your
+                    FAFSA.
+                </p>
+            </div>
+
+            <div class="guide-card">
+                <h3><span>02.</span> Check Your College Emails</h3>
+
+                <p>
+                    Colleges may contact you with requests for additional
+                    information or documents. Respond as quickly as possible
+                    when something is requested.
+                </p>
+            </div>
+
+            <div class="guide-card">
+                <h3><span>03.</span> Compare Financial Aid Offers</h3>
+
+                <p>
+                    Once colleges send financial aid information, carefully
+                    compare grants, scholarships, work-study, and loans to
+                    understand what each school is offering.
+                </p>
+            </div>
+
+            <div class="guide-card">
+                <h3><span>04.</span> Ask Questions</h3>
+
+                <p>
+                    If you do not understand your financial aid package,
+                    contact the school's financial aid office. Asking questions
+                    early can help you make a more informed college decision.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FINAL REMINDER -->
+
+    <section class="info-box">
+
+        <h2>Don't Wait Until the Last Minute</h2>
+
+        <p>
+            Financial aid deadlines can vary by federal, state, and college
+            programs. Completing your FAFSA as early as practical can help
+            you stay ahead of deadlines and give colleges the information
+            they need to determine your financial aid eligibility.
+        </p>
+
+        <div class="fafsa-action">
+            <a
+                href="https://studentaid.gov/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="fafsa-button"
+            >
+                Get Started With FAFSA
+            </a>
+        </div>
+
+    </section>
+
+</main>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+    <p>
+        © 2026 <strong>Pea Ridge Scholarship Hub</strong>
+    </p>
+</footer>
