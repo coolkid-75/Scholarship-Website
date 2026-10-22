@@ -1198,5 +1198,113 @@
     "search": "Silver Law Firm Scholarship $2500 essay-based social worker criminal justice lawyer attorney legal",
     "page": "silver-law-firm-scholarship.html",
     "applicationUrl": "https://www.esilverlaw.com/scholarship/"
+  },
+  {
+    "name": "Nuclear Family Scholarship",
+    "amount": "$1,000 [1 Award]",
+    "amountValue": 1000,
+    "deadline": "February 28, 2027",
+    "badge": "Feb 28",
+    "description": "Encourages students to reflect on how immediate family members have shaped their personal growth, values, and identity while supporting their educational goals.",
+    "eligibility": "1. Be a legal U.S. resident living in one of the 50 states or the District of Columbia. 2. Be a current high school senior, vocational student, undergraduate student, or graduate student enrolled in a vocational program or an accredited two- or four-year postsecondary institution. 3. Have a minimum GPA of 3.0 and maintain good academic standing. 4. Not be an employee of The Law Office of David E. Gordon & Elissa M. Coombs, an immediate family member of an employee, or someone living in an employee's household. 5. Submit a 750–1,000-word essay explaining how an immediate family member, such as a parent or sibling, has shaped who you are today. 6. Submit a résumé detailing professional and academic experience, including current and upcoming schools, if applicable. 7. Submit a transcript from your current school. First-year college students, graduate students, and recent transfer students may also submit their most recent official transcript from their previous school. 8. High school students must provide proof of acceptance to a college or university.",
+    "search": "Nuclear Family Scholarship $1000 gpa-based essay-based resume high school senior undergraduate gradtuate student",
+    "page": "nuclear-family-scholarship.html",
+    "applicationUrl": "https://www.davidgordonlaw.com/2027-nuclear-family-scholarship/"
+  },
+  {
+    "name": "Pest Management Foundation Scholarships",
+    "amount": "$3,000 [30 Awards]",
+    "amountValue": 3000,
+    "deadline": "November 30, 2026",
+    "badge": "Nov 30",
+    "description": "The Pest Management Foundation offers scholarships to support students pursuing education and careers in pest management, entomology, scientific research, and related professional fields.",
+    "eligibility": "1. Eligibility requirements vary by individual scholarship program. 2. Applicants may include graduating high school seniors, undergraduate students, and graduate students. 3. Some scholarships require enrollment or acceptance at a college, university, or trade school. 4. Certain scholarships require applicants to pursue specific fields, such as entomology, urban pest management, biological sciences, accounting, or agriculture. 5. Some scholarships require applicants to reside in specific states or attend designated educational institutions. 6. Certain scholarships prioritize applicants with family members employed in the pest management industry. 7. Some scholarships require applicants to demonstrate leadership, community involvement, academic commitment, or an interest in a pest management career.",
+    "search": "Pest Management Foundation Scholarships $3000",
+    "page": "pest-management-foundation-scholarships.html",
+    "applicationUrl": "https://www.npmapestworld.org/foundation/"
+  },
+  {
+    "name": "AskSia AI Literacy Scholarship",
+    "amount": "$1,500 [2 Awards]",
+    "amountValue": 1500,
+    "deadline": "December 31, 2026",
+    "badge": "Dec 31",
+    "description": "The AskSia AI Literacy Scholarship supports students exploring the role of artificial intelligence in education, encouraging thoughtful perspectives on AI’s impact on learning and academic integrity.",
+    "eligibility": "1. Must be enrolled at or have a confirmed offer of admission from an accredited institution. 2. Must be at least 17 years old at the time of application. 3. Must have a cumulative GPA of 3.0 on a 4.0 scale or its recognized equivalent. 4. Applicants may pursue any field of study; no specific major is required.",
+    "search": "AskSia AI Literacy Scholarship $1500 gpa-based computer science",
+    "page": "asksia-ai-literacy-scholarship.html",
+    "applicationUrl": "https://www.asksia.ai/scholarship"
+  },
+  {
+    "name": "Naval Helicopter Association Scholarship",
+    "amount": "$5,000 [15 Awards]",
+    "amountValue": 5000,
+    "deadline": "January 24, 2027",
+    "badge": "Jan 24",
+    "description": "The Naval Helicopter Association Scholarship Fund supports educational advancement for the Navy, Marine Corps, and Coast Guard vertical-lift community and their families, investing in future leaders.",
+    "eligibility": "1. Must be connected to a Naval Helicopter Association (NHA) lifetime member or a member in good standing for at least three years, unless exempt. 2. Must be an active-duty, Reserve, or former U.S. Navy, Marine Corps, or Coast Guard rotary-wing aviator, aircrew member, or maintenance/support personnel, or their child, grandchild, or spouse. 3. Active-duty enlisted personnel at E-6 rank or below with current or prior helicopter or MV-22 affiliation, and their families, are exempt from NHA membership requirements but must provide Command Verification of Eligibility. 4. Must be a high school graduate or prospective graduate, or a current undergraduate or graduate student. 5. Must be pursuing a trade certificate, associate, bachelor's, or graduate degree at an accredited institution. 6. Applicants appointed to a Service Academy are ineligible. 7. Recipients of Service ROTC scholarships covering tuition and fees are ineligible.",
+    "search": "Naval Helicopter Association Scholarship $5000 military ROTC active-duty NHA graduate",
+    "page": "naval-helicopter-association-scholarship.html",
+    "applicationUrl": "https://navalhelicopterassn.org/scholarship-fund/"
+  },
+  {
+    "name": "First-in-Family Scholarship",
+    "amount": "$1,000 [1 Award]",
+    "amountValue": 1000,
+    "deadline": "February 8, 2027",
+    "badge": "Feb 8",
+    "description": "The First-in-Family Scholarship supports first-generation college students by providing financial assistance to help them pursue undergraduate education and achieve their academic goals.",
+    "eligibility": "1. Must be a first-generation college student whose parents or guardians have not attained any form of higher education. 2. Must be enrolled or planning to enroll in an undergraduate program in the United States. 3. Must be at least 17 years old. 4. Must be a U.S. citizen. 5. Must demonstrate financial need.",
+    "search": "First-in-Family Scholarship $1000 need-based first-generation",
+    "page": "first-in-family-scholarships.html",
+    "applicationUrl": "https://www.shevlinsmith.com/scholarship"
+  },
+  {
+    "name": "Kennedy Center VSA Young Soloists Award",
+    "amount": "$2,500 [4 Awards]",
+    "amountValue": 2500,
+    "deadline": "November 19, 2026",
+    "badge": "Nov 19",
+    "description": "The Kennedy Center VSA Young Soloists Award supports young musicians with disabilities through financial assistance, performance opportunities, mentorship, and professional development across musical genres.",
+    "eligibility": "1. Must be a musician with a disability. 2. Must be between 14 and 25 years old at the time of the application deadline. 3. Must be a U.S. citizen, U.S. legal resident, or international applicant; applicants from other countries may also apply. 4. Must not have previously won the Access/VSA International Young Musicians Program. 5. Must be willing to participate in all required workshops, rehearsals, and performances if selected. 6. Finalists must provide proof of age and disability. 7. U.S. applicants selected as finalists must provide proof of authorization to work in the United States. 8. Winners must agree to publicly disclose their disability in program-related materials and public appearances. 9. Must be able to participate in program activities conducted in English and/or American Sign Language (ASL).",
+    "search": "Kennedy Center VSA Young Soloists Award $2500 disability music musician ASL",
+    "page": "kennedy-center-vsa-young-soloists-award.html",
+    "applicationUrl": "https://thekennedycenter.smapply.io/prog/2027_accessvsa_IYM/"
+  },
+  {
+    "name": "Point Foundation Flagship Scholarship",
+    "amount": "$15,000 [5 Awards]",
+    "amountValue": 15000,
+    "deadline": "November 19, 2026",
+    "badge": "Nov 19",
+    "description": "The Point Foundation Flagship Scholarship provides financial assistance, leadership development, career resources, and networking opportunities to support LGBTQ+ students and allies pursuing higher education.",
+    "eligibility": "1. Must have a minimum cumulative GPA of 3.3. 2. Must be at least a high school senior at the time of application. 3. Must be enrolled full-time in a degree-seeking undergraduate, graduate, or professional program at an accredited, nonprofit college or university in the United States. 4. Must be a member of the LGBTQ+ community or an ally. 5. Previous Point Scholarship recipients must have exited their former program in active status to qualify for future scholarships. 6. Must not be enrolled in a 100% online degree program. 7. Must not have already received four years of the Point Foundation Flagship Scholarship. 8. Applicants and their immediate family members must not have a formal relationship with the Point Foundation as an employee, board member, or volunteer.",
+    "search": "Point Foundation Flagship Scholarship $15000 gpa-based LGBTQ+ leadership",
+    "page": "point-foundation-flagship-scholarship.html",
+    "applicationUrl": "https://pointfoundation.org/scholarships/flagship"
+  },
+  {
+    "name": "Baloo Living Dream Builder Scholarship Grant",
+    "amount": "$1,000 [3 Awards]",
+    "amountValue": 1000,
+    "deadline": "December 1, 2026",
+    "badge": "Dec 1",
+    "description": "The Baloo Living Dream Builder Scholarship Grant supports emerging student leaders who advance community initiatives while promoting resilience, personal well-being, and sustainable positive change.",
+    "eligibility": "1. Must be accepted into or enrolled in an accredited undergraduate university program or trade/vocational program in the United States. 2. Must be actively leading or organizing a project or initiative. 3. Eligible initiatives may include mental health peer groups, sustainability projects, community wellness programs, mutual aid networks, local advocacy, or educational efforts.",
+    "search": "Baloo Living Dream Builder Scholarship Grant $1000 mental health leadership",
+    "page": "baloo-living-dream-builder-scholarship-grant.html",
+    "applicationUrl": "https://balooliving.com/pages/scholarship"
+  },
+  {
+    "name": "Building Forward from Home Scholarship",
+    "amount": "$2,500 [1 Award]",
+    "amountValue": 2500,
+    "deadline": "January 30, 2027",
+    "badge": "Jan 30",
+    "description": "The Building Forward from Home Scholarship recognizes students who reflect on their community’s influence on their future goals and express their commitment to giving back.",
+    "eligibility": "1. Must be enrolled in or accepted at an accredited U.S. trade school, college, university, or graduate school. 2. Must agree to the scholarship’s terms and conditions. 3. Must submit all required application materials. 4. Must create a video of up to three minutes discussing their connection to their community, its impact on their goals, and how they hope to give back. 5. Must submit the video URL through the scholarship application form.",
+    "search": "Building Forward from Home Scholarship $2500 video-based",
+    "page": "building-forward-from-home-scholarship.html",
+    "applicationUrl": "https://stormlawpartners.com/scholarship/"
   }
 ]
