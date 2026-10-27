@@ -57,7 +57,7 @@
     "eligibility": "1. Open to all students",
     "search": "Scholarships360 no-essay $10000 all-students",
     "page": "scholarships360-no-essay-scholarship.html",
-    "applicationUrl": "https://app.scholarship360.org/?redirect=/dashboard/scholarships/10000-no-essay-scholarship"
+    "applicationUrl": "https://app.scholarships360.org/?redirect=/dashboard/scholarships/10000-no-essay-scholarship&aff=8"
   },
   {
     "name": "CollegeXpress Autumn Award",
@@ -1318,5 +1318,137 @@
     "search": "Hans P. Loewen Scholarship $2000 STEM ANS essay-based high school senior",
     "page": "hans-p-lowen-scholarship.html",
     "applicationUrl": "https://www.ans.org/scholarships/loewen/"
+  },
+  {
+    "name": "AWS Welder Training Scholarship",
+    "amount": "$1,000 [800 Awards]",
+    "amountValue": 1000,
+    "deadline": "November 30, 2026",
+    "badge": "Nov 30",
+    "description": "The AWS Welder Training Scholarship supports students pursuing welding certificate programs at trade schools, community colleges, or other training facilities. Funds cover education-related expenses.",
+    "eligibility": "1. Applicant must be planning to attend a trade school, community college, or another facility providing welder training. 2. Applicant must be pursuing a welding certificate program less than two years in length. 3. The scholarship cannot be used toward an associate or bachelor's degree program. 4. Applicants cannot be Section officers or family members of Section officers. 5. Applicants cannot be Section Selection Committee members or family members of Section Selection Committee members. 6. Applicant must be planning to attend school or participate in welding training within the next year.",
+    "search": "AWS Welder Training Scholarship $1000 trade school certificate",
+    "page": "aws-welder-training-scholarship.html",
+    "applicationUrl": "https://www.aws.org/Career-Resources/Students/Scholarships/Welder-Training-Scholarship/"
+  },
+  {
+    "name": "Hagan Scholarship",
+    "amount": "$60,000 [1500 Awards]",
+    "amountValue": 60000,
+    "deadline": "December 1, 2026",
+    "badge": "Dec 1",
+    "description": "The Hagan Scholarship supports students pursuing undergraduate and graduate education, offering financial assistance, investment account management experience, life skills workshops, and opportunities for international study and travel.",
+    "eligibility": "1. Applicant must attend a high school located in the United States. 2. Applicant must be a member of the high school graduating class. 3. Students of any nationality or citizenship may apply if they meet the eligibility criteria. 4. Applicant must have an unweighted cumulative grade point average (CGPA) of at least 3.50. 5. Applicant must provide a current copy of their high school transcript. 6. Applicant must provide an unsealed letter of recommendation. 7. Applicant must enroll in an eligible four-year college or university during the first fall semester following high school graduation. 8. The scholarship cannot be used to attend a community college, junior college, or online institution. 9. Applicant must maintain a four-year graduation schedule or complete the equivalent within four years if enrolled in a professional program. 10. Applicant must work 240 hours between January 1 and September 1 of the specified year to qualify for a fall semester disbursement. 11. Employment must be regularly scheduled, supervised, compensated, and performed for a non-family employer. 12. Employment may be full-time or part-time. 13. The applicant's parents' adjusted gross household income, as reported for the specified tax year, must not exceed $125,000. 14. U.S. citizen finalists must provide the first two pages of their FAFSA Summary showing the Student Aid Index (SAI). 15. Non-U.S. citizen finalists must provide proof of non-U.S. citizenship, such as a foreign passport or Green Card. 16. Applicant must apply for federal and state grants if eligible.",
+    "search": "Hagan Scholarship $60000 gpa-based need-based high school senior",
+    "page": "hagan-scholarship.html",
+    "applicationUrl": "https://haganscholarships.org/q-a/"
+  },
+  {
+    "name": "Intoxalock Drunk Driving Prevention Scholarship",
+    "amount": "$3,000 [1 Award]",
+    "amountValue": 3000,
+    "deadline": "February 28, 2027",
+    "badge": "Feb 28",
+    "description": "The Intoxalock Drunk Driving Prevention Scholarship supports students who raise awareness about drunk driving prevention through written responses and a public service announcement video highlighting roadway safety.",
+    "eligibility": "1. Applicant must be currently enrolled or accepted for enrollment at an accredited two-year or four-year U.S. college, university, or trade/vocational program. 2. Applicants may pursue any field of study. 3. Applicant must provide written responses, including a personal introduction, an impact statement, academic information, and an explanation of how the scholarship will be used. 4. Applicant must create a public service announcement video addressing drunk driving prevention. 5. The video must be in vertical format and between 60 and 90 seconds long. 6. Applicant must appear on camera with their face visible and well-framed throughout the video; voice-over-only submissions are not accepted. 7. The video must have clear audio and a clean, well-lit background. 8. Applicant must mention Intoxalock by name on camera and showcase the Intoxalock device using the provided brand resources. 9. The video must address the second-chance message, acknowledging how Intoxalock helps offenders regain driving privileges responsibly. 10. The video must explain how ignition interlock technology helps prevent drunk driving and protect lives. 11. The video must be exported as an MP4 file at 720p resolution or higher. 12. Applicant must provide the full legal name of their educational institution, current grade level, most recent cumulative GPA on a 4.0 scale or equivalent, degree or program focus, and an explanation of how the scholarship will support their educational expenses. 13. Applicant must provide written responses explaining their background, values, motivations, personal connection to drunk driving prevention, the impact of drunk driving on their perspective, and their views on ignition interlock technology and roadway safety. 14. Applicant must provide an active email address and phone number where they can be contacted if selected as a finalist. 15. All written responses must be proofread for grammar, clarity, and spelling. 16. Applicants must submit a complete application, including all required written responses and the video submission. 17. Applicants must be willing to participate in public social media voting if selected as a finalist, as the final selection considers both internal judging scores and public engagement. 18. The video must directly address drunk driving prevention, demonstrate thoughtfulness and originality, communicate an effective message, acknowledge the second-chance message, and explain how ignition interlock technology saves lives.",
+    "search": "Intoxalock Drunk Driving Prevention Scholarship $3000 video-based gpa-based",
+    "page": "intoxalock-drunk-driving-prevention-scholarship.html",
+    "applicationUrl": "https://www.intoxalock.com/scholarship"
+  },
+  {
+    "name": "Hard Head Veterans Helmet Scholarships",
+    "amount": "$1,000 [4 Awards]",
+    "amountValue": 1000,
+    "deadline": "March 31, 2027",
+    "badge": "Mar 31",
+    "description": "The Hard Head Veterans Helmet Scholarships support aspiring law enforcement officers and skilled tradespeople pursuing professional training, providing protective headgear upon successful program completion.",
+    "eligibility": "1. Applicant must be pursuing a career in law enforcement or a skilled trade. 2. Law enforcement applicants must be enrolled in a city or state academy, a university degree program, or pursuing additional law enforcement training. 3. Skilled trades applicants must be pursuing training through a qualified program. 4. Skilled trades may include fields such as electrical work, welding, or carpentry. 5. Recipients must successfully complete their respective educational or training program to receive the associated protective headgear.",
+    "search": "Hard Head Veterans Helmet Scholarships $1000 police law enforcement",
+    "page": "hard-head-veterans-helmet-scholarships.html",
+    "applicationUrl": "https://www.hardheadveterans.com/pages/ate-ballistic-helmet-scholarships?srsltid=AU7gw4XrgUxAm5IXJftDQ1DtPbt_oHzRcxlpxYvjQf6kMyg_doJnNcH7"
+  },
+  {
+    "name": "Automotive Women's Association Scholarships",
+    "amount": "$5,000 [22 Awards]",
+    "amountValue": 5000,
+    "deadline": "January 2, 2027",
+    "badge": "Jan 2",
+    "description": "The Automotive Women's Alliance Foundation Scholarship supports women pursuing careers in the automotive, vehicular, and mobility industries by helping fund their college education and professional development.",
+    "eligibility": "1. Applicant must be accepted to or enrolled in an accredited college or university. 2. Applicant must maintain a minimum GPA of 3.0 during a scholarship-funded semester. 3. Applicant must be a citizen of a North American country. 4. Applicant must demonstrate career aspirations in the automotive, vehicular, or mobility industries. 5. Applicant must complete the online scholarship application. 6. Applicant must submit a one-page cover letter detailing their career aspirations in the automotive, vehicular, or mobility industries, including their name. 7. Applicant must submit a resume of no more than two pages detailing education, work experience, volunteer activities, and extracurricular activities. 8. Applicant must submit an academic transcript; high school seniors must provide a high school transcript, while other applicants must provide their current or most recent college transcript. 9. High school seniors and college transfer students who are not yet enrolled must provide an acceptance letter from their college or school. 10. All required documents must be legible and submitted in PDF, PNG, or JPG format, with each file smaller than 5 MB. 11. Applicant must provide written or electronic confirmation of scholarship acceptance within five days of receiving the award notification. 12. Applicant must notify the AWAF Scholarship Committee if they cannot accept the scholarship or if their education is interrupted, as the status of the funds will then be reviewed. 13. Applicants must be willing to participate in an interview if requested by the AWAF Scholarship Committee. 14. Recommendation letters and other noteworthy supporting materials may be submitted but are optional.",
+    "search": "Automotive Women's Association Scholarships $5000 gpa-based interview-based resume-based vehicle",
+    "page": "automotive-womens-association-scholarships.html",
+    "applicationUrl": "https://awafoundation.org/Scholarships"
+  },
+  {
+    "name": "Arkansas Association of Federal Coordinators Scholarship",
+    "amount": "$1,000 [1 Award]",
+    "amountValue": 1000,
+    "deadline": "November 20, 2026",
+    "badge": "Nov 20",
+    "description": "The AAFC Scholarship supports Arkansas high school seniors pursuing college education in the field of education and offers an opportunity to compete for a national scholarship.",
+    "eligibility": "1. Applicant must be a high school senior. 2. Applicant must plan to major in education.",
+    "search": "Arkansas Association of Federal Coordinators Scholarship AAFC education high school senior",
+    "page": "arkansas-association-of-federal-coordinators-scholarship.html",
+    "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdbURlce993Udt4k-1QjUrAsZDwbK8fu2ZEb3lIeu9EQeX5Xw/closedform"
+  },
+  {
+    "name": "Bessie Mathew Foundation Education Assistance Program",
+    "amount": "$5,000 [3 Awards]",
+    "amountValue": 5000,
+    "deadline": "November 30, 2026",
+    "badge": "Nov 30",
+    "description": "The Bessie Mathew Foundation Education Assistance Program helps families affected by cancer manage education-related expenses, including childcare, school supplies, tutoring, and college costs.",
+    "eligibility": "1. At least one member of the applicant's household must have been diagnosed with cancer. 2. The household must include at least one female. 3. A household member must have an education-related financial need, including tuition, tutoring, uniforms, books, or other educational expenses. 4. Eligible educational programs include daycare, after-school care, pre-kindergarten through 12th grade, and accredited colleges or universities located in the United States. 5. Applicant must reside in the United States or a U.S. territory. 6. Applicant must not have received a Bessie Mathew Foundation Education Assistance Program payment within the past 12 months. 7. Applicant must not be an immediate family member of the Bessie Mathew Foundation board or selection committee. 8. Applicant must be able to provide documentation of the costs requiring financial assistance, such as an invoice. 9. Requested assistance must cover future educational expenses; previously paid expenses are not eligible for reimbursement.",
+    "search": "Bessie Mathew Foundation Education Assistance Program $5000 cancer",
+    "page": "bessie-matthew-foundation-education-assistance-program.html",
+    "applicationUrl": "https://www.bessiemathewfoundation.org/eap"
+  },
+  {
+    "name": "Dr Juan Andrade Jr. Scholarship",
+    "amount": "$1,000 [20 Awards]",
+    "amountValue": 1000,
+    "deadline": "December 30, 2026",
+    "badge": "Dec 30",
+    "description": "The Dr. Juan Andrade Jr. Scholarship supports undergraduate students through financial assistance while encouraging leadership development, academic achievement, and community engagement.",
+    "eligibility": "1. Applicant must be enrolled or accepted for enrollment as a full-time undergraduate student at an accredited two-year or four-year institution in the United States or its territories. 2. Applicant must demonstrate a verifiable financial need. 3. Applicants of any citizenship status, including non-U.S. citizens, may apply. 4. Applicant must be a full-time undergraduate student during the specified academic year. 5. Eligible applicants include high school seniors, college freshmen, sophomores, and juniors up to age 25. 6. Applicant must submit a 500–1,000-word personal essay describing their background, family history, life or work experiences, significant achievements, and any obstacles they have overcome. 7. Applicant must submit a 500–1,000-word leadership essay discussing their vision for America's future, the leadership needed, their intended leadership role, potential community benefits, and how USHLI can help them achieve their goals. 8. Applicant may submit an optional essay sharing additional relevant information supporting their application. 9. Applicant must submit a recent, high-resolution, color portrait photograph in PNG, JPG, or GIF format, with a 2.5:3.5 aspect ratio, suitable for printed publications; selfies are not accepted. 10. Applicant must submit a one-page resume in PDF format detailing work experience, academic accomplishments, and other relevant information. 11. Applicant must submit their most recent unofficial academic transcript in PDF format; college freshmen must submit their high school transcript. 12. Applicant must submit two letters of recommendation focusing on leadership abilities, academic performance, and the ability or desire to serve the community. 13. One recommendation must come from an academic reference, such as a teacher or academic advisor. 14. One recommendation must come from a professional or community service reference, such as a supervisor, employer, or coach. 15. Applicant must provide contact information for both references through the application. 16. Applicant must ensure both recommendation letters are submitted by the references according to the scholarship's instructions.",
+    "search": "Dr Juan Andrade Jr. Scholarship $1000 essay-based need-based",
+    "page": "dr-juan-andrade-jr-scholarship.html",
+    "applicationUrl": "https://www.ushli.org/dr-juan-andrade-jr-scholarship-for-young-hispanic-leaders/"
+  },
+  {
+    "name": "Washington Crossing Foundation Scholarship",
+    "amount": "$5,000 [31 Awards]",
+    "amountValue": 5000,
+    "deadline": "January 15, 2027",
+    "badge": "Jan 15",
+    "description": "The Washington Crossing Foundation Scholarship supports high school seniors pursuing careers in government service, honoring leadership, public service, and the legacy of George Washington.",
+    "eligibility": "1. Applicant must be a high school senior completing twelfth grade or the final year of high school in the specified year. 2. Applicant must be a citizen of the United States. 3. Applicant must plan to pursue a career serving the United States through local, state, or federal government. 4. Applicant must submit a one-page essay explaining their interest in a government service career, including any inspiration drawn from George Washington's leadership during the crossing of the Delaware. 5. Applicant must obtain a recommendation from their high school principal or guidance counselor evaluating their achievements. 6. Applicant must submit academic transcripts. 7. Applicant must submit national testing scores. 8. Applicant may include additional supporting information of their choice, as described in the official scholarship rules. 9. Applicant must submit three copies of a double-spaced cover page containing all required information, including personal contact details, school information, class and school enrollment numbers, recommender information, preferred colleges, scholarship discovery information, high school senior status, date of birth, and applicable regional scholarship interests. 10. Applicants seeking regional scholarships must meet the residency or other applicable regional requirements: the West Coast Laura Daniel Brown Scholarship is for residents of Alaska, Arizona, California, Hawaii, Idaho, Montana, Nevada, New Mexico, Oregon, Utah, Washington, or Wyoming; the Charlie Kirk Memorial Scholarship gives preference to Utah residents or students committing to attend a Utah secondary school in person for eight semesters; the Pennsylvania Scholarship is for Pennsylvania residents; the L. John Hutton Scholarship gives preference to Indiana residents; the Charles E. Tweedy Scholarship gives preference to Alabama residents or students committing to attend an Alabama secondary school in person for at least two semesters; and the Eichelberger Southern Maryland Scholarship is for Southern Maryland residents. 11. Applicants planning to attend a military academy or who have received a full four-year tuition scholarship may still be eligible for an award. 12. Scholarship recipients must meet the requirements of their chosen college. 13. Winners must attend the scholarship awards ceremony and luncheon to receive their scholarship.",
+    "search": "Washington Crossing Foundation Scholarship $5000 ACT SAT",
+    "page": "washington-crossing-foundation-scholarship.html",
+    "applicationUrl": "https://www.gwcf.org/scholarship"
+  },
+  {
+    "name": "Mary E. Smith Foundation Scholarships",
+    "amount": "$2,500 [4 Awards]",
+    "amountValue": 2500,
+    "deadline": "February 1, 2027",
+    "badge": "Feb 1",
+    "description": "The Mary E. Smith Foundation offers scholarships supporting students affected by brain tumors, aspiring healthcare professionals, and Chicago Public School students pursuing science-related careers.",
+    "eligibility": "1. National Excellence in Academics & Community Service Award: Applicant must be a brain tumor patient or survivor, or closely related to someone diagnosed with a brain tumor. 2. Eligible family relationships for the National Excellence in Academics & Community Service Award are limited to spouses, biological children, biological parents, and biological siblings. 3. Applicants must be U.S. residents. 4. Applicants must be entering or currently enrolled in an advanced educational program at a college, university, vocational school, or other educational institution located within the 50 United States or the District of Columbia. 5. Applicants must demonstrate a need for financial assistance. 6. National Excellence in Science & Medicine Award: Applicant must be a U.S. resident entering or currently enrolled in an advanced health sciences educational program, including biology, chemistry, or nursing. 7. Applicants for the National Excellence in Science & Medicine Award must intend to pursue a career in oncology or neurology, including neuroscience, neurosurgery, or neuropathology. 8. Applicants for the National Excellence in Science & Medicine Award must attend a college or four-year university located within the 50 United States or the District of Columbia. 9. Karen Lewis CTU-CPS Excellence in Science Award: Applicant must be a graduate or current student of the Chicago Public Schools (CPS). 10. Applicants for the Karen Lewis CTU-CPS Excellence in Science Award must be entering or currently enrolled in an advanced educational program in health sciences, including biology, chemistry, or nursing. 11. Applicants for the Karen Lewis CTU-CPS Excellence in Science Award must be pursuing a technical certification, associate degree, or bachelor's degree. 12. Applicants for the Karen Lewis CTU-CPS Excellence in Science Award must focus their studies on science, screening, or research in oncology or neurology, including neuroscience, neurosurgery, or neuropathology. 13. Applicants for the Karen Lewis CTU-CPS Excellence in Science Award must attend a college or four-year university located within the 50 United States or the District of Columbia. 14. #GIVING TUESDAY Award: Applicant must have previously applied for one of the foundation's scholarships. 15. Applicants for the #GIVING TUESDAY Award must be pursuing or planning to pursue a career in health sciences. 16. Applicants for the #GIVING TUESDAY Award must provide verification of enrollment in a college, medical school, or technical certification program for the applicable academic term.",
+    "search": "Mary E. Smith Foundation Scholarships $25000 cancer brain tumor",
+    "page": "mary-e-smith-foundation-scholarships.html",
+    "applicationUrl": "https://maryesmithfoundation.org/2027-scholarship-application-timeframe/"
+  },
+  {
+    "name": "Uplifting Communities Scholarship",
+    "amount": "$1,500 [1 Award]",
+    "amountValue": 1500,
+    "deadline": "March 17, 2027",
+    "badge": "Mar 17",
+    "description": "The Uplifting Communities Scholarship supports undergraduate and graduate students committed to empowering underserved communities through volunteerism, advocacy, leadership, and community involvement.",
+    "eligibility": "1. Applicant must demonstrate a commitment to uplifting underserved communities through volunteerism and advocacy. 2. Applicant must be enrolled at an accredited college or university and be in good academic standing. 3. Applicant must maintain a minimum GPA of 2.7. 4. Applicant must be at least 17 years old. 5. Applicant must be a United States citizen or permanent resident. 6. Applicant may be pursuing any major at the undergraduate or graduate level. 7. Applicant must demonstrate meaningful community impact through leadership, initiating positive change, or actively contributing to community development projects or initiatives. 8. Applicant must submit a thoughtful and well-constructed video submission. 9. Applicant must meet all eligibility criteria and submit all required application documentation.",
+    "search": "Uplifting Communities Scholarship $1500 gpa-based leadership",
+    "page": "uplifting-communities-scholarship.html",
+    "applicationUrl": "https://www.donaldbellaw.com/scholarship"
   }
 ]
