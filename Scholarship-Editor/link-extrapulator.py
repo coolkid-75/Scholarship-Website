@@ -5,7 +5,9 @@ from tkinter import ttk, messagebox, filedialog
 from pathlib import Path
 
 
-JSON_FILE = Path("/home/coolkid75/Scholarship-Website/public/data/scholarships.json")
+JSON_FILE = Path(
+    "/home/coolkid75/Scholarship-Website/public/data/scholarships.json"
+)
 
 
 class ScholarshipExtractor:
@@ -24,7 +26,6 @@ class ScholarshipExtractor:
 
     def build_gui(self):
 
-        # Header
         header = ttk.Label(
             self.root,
             text="Scholarship Name & Application Link Extractor",
@@ -32,39 +33,37 @@ class ScholarshipExtractor:
         )
         header.pack(pady=15)
 
-        # Search bar
+        # Search
         search_frame = ttk.Frame(self.root)
         search_frame.pack(fill="x", padx=15, pady=5)
 
         ttk.Label(search_frame, text="Search:").pack(side="left")
 
         self.search_var = tk.StringVar()
-        self.search_var.trace_add("write", self.search_scholarships)
+        self.search_var.trace_add(
+            "write",
+            self.search_scholarships
+        )
 
-        search_entry = ttk.Entry(
+        ttk.Entry(
             search_frame,
             textvariable=self.search_var,
             width=50
-        )
-        search_entry.pack(side="left", padx=10)
-
-        ttk.Button(
-            search_frame,
-            text="Refresh JSON",
-            command=self.load_json
-        ).pack(side="right")
+        ).pack(side="left", padx=10)
 
         # Main table
         table_frame = ttk.Frame(self.root)
-        table_frame.pack(fill="both", expand=True, padx=15, pady=10)
-
-        columns = ("name", "link")
+        table_frame.pack(
+            fill="both",
+            expand=True,
+            padx=15,
+            pady=10
+        )
 
         self.tree = ttk.Treeview(
             table_frame,
-            columns=columns,
-            show="headings",
-            selectmode="extended"
+            columns=("name", "link"),
+            show="headings"
         )
 
         self.tree.heading("name", text="Scholarship Name")
@@ -102,10 +101,10 @@ class ScholarshipExtractor:
             self.display_selected
         )
 
-        # Copyable text display
+        # Copyable display
         display_frame = ttk.LabelFrame(
             self.root,
-            text="Selected Scholarship Data (Copy/Paste)"
+            text="Scholarship Data"
         )
         display_frame.pack(fill="x", padx=15, pady=5)
 
@@ -115,6 +114,7 @@ class ScholarshipExtractor:
             wrap="word",
             font=("Consolas", 10)
         )
+
         self.text_display.pack(
             fill="both",
             expand=True,
@@ -122,26 +122,29 @@ class ScholarshipExtractor:
             pady=5
         )
 
-        # Buttons
+        # Only three action buttons
         button_frame = ttk.Frame(self.root)
         button_frame.pack(fill="x", padx=15, pady=10)
 
-        buttons = [
-            ("Copy Name", self.copy_name),
-            ("Copy Link", self.copy_link),
-            ("Copy Both", self.copy_both),
-            ("Copy All", self.copy_all),
-            ("Export CSV", self.export_csv),
-        ]
+        ttk.Button(
+            button_frame,
+            text="Copy All",
+            command=self.copy_all
+        ).pack(side="left", padx=5, expand=True, fill="x")
 
-        for label, command in buttons:
-            ttk.Button(
-                button_frame,
-                text=label,
-                command=command
-            ).pack(side="left", padx=5, expand=True, fill="x")
+        ttk.Button(
+            button_frame,
+            text="Export CSV",
+            command=self.export_csv
+        ).pack(side="left", padx=5, expand=True, fill="x")
 
-        # Status
+        ttk.Button(
+            button_frame,
+            text="Refresh JSON",
+            command=self.load_json
+        ).pack(side="left", padx=5, expand=True, fill="x")
+
+        # Status bar
         self.status = ttk.Label(
             self.root,
             text="Ready",
@@ -157,7 +160,9 @@ class ScholarshipExtractor:
                 data = json.load(file)
 
             if not isinstance(data, list):
-                raise ValueError("JSON must contain a list of scholarships.")
+                raise ValueError(
+                    "JSON must contain a list of scholarships."
+                )
 
             self.scholarships = []
 
@@ -168,11 +173,14 @@ class ScholarshipExtractor:
 
                 self.scholarships.append({
                     "name": item.get("name", ""),
-                    "applicationUrl": item.get("applicationUrl", "")
+                    "applicationUrl": item.get(
+                        "applicationUrl", ""
+                    )
                 })
 
             self.search_var.set("")
             self.filtered_scholarships = self.scholarships.copy()
+
             self.populate_table()
 
             self.status.config(
@@ -188,17 +196,22 @@ class ScholarshipExtractor:
         except json.JSONDecodeError as error:
             messagebox.showerror(
                 "Invalid JSON",
-                f"Your JSON file contains an error:\n{error}"
+                str(error)
             )
 
         except Exception as error:
-            messagebox.showerror("Error", str(error))
+            messagebox.showerror(
+                "Error",
+                str(error)
+            )
 
     def populate_table(self):
 
         self.tree.delete(*self.tree.get_children())
 
-        for index, scholarship in enumerate(self.filtered_scholarships):
+        for index, scholarship in enumerate(
+            self.filtered_scholarships
+        ):
 
             self.tree.insert(
                 "",
@@ -211,8 +224,8 @@ class ScholarshipExtractor:
             )
 
         self.status.config(
-            text=f"Showing {len(self.filtered_scholarships)} of "
-                 f"{len(self.scholarships)} scholarships."
+            text=f"Showing {len(self.filtered_scholarships)} "
+                 f"of {len(self.scholarships)} scholarships."
         )
 
     def search_scholarships(self, *args):
@@ -228,21 +241,6 @@ class ScholarshipExtractor:
 
         self.populate_table()
 
-    def get_selected(self):
-
-        selected = self.tree.selection()
-
-        if not selected:
-            messagebox.showwarning(
-                "Nothing Selected",
-                "Please select a scholarship first."
-            )
-            return None
-
-        index = int(selected[0])
-
-        return self.filtered_scholarships[index]
-
     def display_selected(self, event=None):
 
         selected = self.tree.selection()
@@ -251,7 +249,9 @@ class ScholarshipExtractor:
 
         for item_id in selected:
 
-            scholarship = self.filtered_scholarships[int(item_id)]
+            scholarship = self.filtered_scholarships[
+                int(item_id)
+            ]
 
             self.text_display.insert(
                 tk.END,
@@ -259,46 +259,13 @@ class ScholarshipExtractor:
                 f"Link: {scholarship['applicationUrl']}\n\n"
             )
 
-    def copy_to_clipboard(self, text):
-
-        self.root.clipboard_clear()
-        self.root.clipboard_append(text)
-        self.root.update()
-
-        self.status.config(text="Copied to clipboard!")
-
-    def copy_name(self):
-
-        scholarship = self.get_selected()
-
-        if scholarship:
-            self.copy_to_clipboard(scholarship["name"])
-
-    def copy_link(self):
-
-        scholarship = self.get_selected()
-
-        if scholarship:
-            self.copy_to_clipboard(
-                scholarship["applicationUrl"]
-            )
-
-    def copy_both(self):
-
-        scholarship = self.get_selected()
-
-        if scholarship:
-
-            text = (
-                f"{scholarship['name']}\n"
-                f"{scholarship['applicationUrl']}"
-            )
-
-            self.copy_to_clipboard(text)
-
     def copy_all(self):
 
         if not self.scholarships:
+            messagebox.showwarning(
+                "No Data",
+                "There are no scholarships to copy."
+            )
             return
 
         lines = []
@@ -310,7 +277,13 @@ class ScholarshipExtractor:
                 f"{scholarship['applicationUrl']}"
             )
 
-        self.copy_to_clipboard("\n".join(lines))
+        self.root.clipboard_clear()
+        self.root.clipboard_append("\n".join(lines))
+        self.root.update()
+
+        self.status.config(
+            text=f"Copied {len(self.scholarships)} scholarships!"
+        )
 
     def export_csv(self):
 
@@ -354,7 +327,7 @@ class ScholarshipExtractor:
             )
 
             self.status.config(
-                text=f"CSV exported: {filename}"
+                text="CSV export successful!"
             )
 
         except Exception as error:
@@ -368,7 +341,6 @@ class ScholarshipExtractor:
 if __name__ == "__main__":
 
     root = tk.Tk()
-
     app = ScholarshipExtractor(root)
-
     root.mainloop()
+
