@@ -3,6 +3,7 @@ import csv
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
 from pathlib import Path
+from urllib.parse import urlparse
 
 
 JSON_FILE = Path(
@@ -14,12 +15,12 @@ class ScholarshipExtractor:
 
     def __init__(self, root):
         self.root = root
-        self.root.title("Scholarship Name & Link Extractor")
-        self.root.geometry("1050x650")
-        self.root.minsize(800, 500)
+        self.root.title("Root Domain Extractor")
+        self.root.geometry("750x600")
+        self.root.minsize(600, 400)
 
-        self.scholarships = []
-        self.filtered_scholarships = []
+        self.domains = []
+        self.filtered_domains = []
 
         self.build_gui()
         self.load_json()
@@ -28,7 +29,7 @@ class ScholarshipExtractor:
 
         header = ttk.Label(
             self.root,
-            text="Scholarship Name & Application Link Extractor",
+            text="Scholarship Root Domain Extractor",
             font=("Arial", 18, "bold")
         )
         header.pack(pady=15)
@@ -42,7 +43,7 @@ class ScholarshipExtractor:
         self.search_var = tk.StringVar()
         self.search_var.trace_add(
             "write",
-            self.search_scholarships
+            self.search_domains
         )
 
         ttk.Entry(
@@ -51,7 +52,7 @@ class ScholarshipExtractor:
             width=50
         ).pack(side="left", padx=10)
 
-        # Main table
+        # Domain table
         table_frame = ttk.Frame(self.root)
         table_frame.pack(
             fill="both",
@@ -62,67 +63,25 @@ class ScholarshipExtractor:
 
         self.tree = ttk.Treeview(
             table_frame,
-            columns=("name", "link"),
+            columns=("domain",),
             show="headings"
         )
 
-        self.tree.heading("name", text="Scholarship Name")
-        self.tree.heading("link", text="Application Link")
+        self.tree.heading("domain", text="Root Domain")
+        self.tree.column("domain", width=600, anchor="w")
 
-        self.tree.column("name", width=350, anchor="w")
-        self.tree.column("link", width=600, anchor="w")
-
-        scrollbar_y = ttk.Scrollbar(
+        scrollbar = ttk.Scrollbar(
             table_frame,
             orient="vertical",
             command=self.tree.yview
         )
 
-        scrollbar_x = ttk.Scrollbar(
-            table_frame,
-            orient="horizontal",
-            command=self.tree.xview
-        )
+        self.tree.configure(yscrollcommand=scrollbar.set)
 
-        self.tree.configure(
-            yscrollcommand=scrollbar_y.set,
-            xscrollcommand=scrollbar_x.set
-        )
+        self.tree.pack(side="left", fill="both", expand=True)
+        scrollbar.pack(side="right", fill="y")
 
-        self.tree.grid(row=0, column=0, sticky="nsew")
-        scrollbar_y.grid(row=0, column=1, sticky="ns")
-        scrollbar_x.grid(row=1, column=0, sticky="ew")
-
-        table_frame.rowconfigure(0, weight=1)
-        table_frame.columnconfigure(0, weight=1)
-
-        self.tree.bind(
-            "<<TreeviewSelect>>",
-            self.display_selected
-        )
-
-        # Copyable display
-        display_frame = ttk.LabelFrame(
-            self.root,
-            text="Scholarship Data"
-        )
-        display_frame.pack(fill="x", padx=15, pady=5)
-
-        self.text_display = tk.Text(
-            display_frame,
-            height=5,
-            wrap="word",
-            font=("Consolas", 10)
-        )
-
-        self.text_display.pack(
-            fill="both",
-            expand=True,
-            padx=5,
-            pady=5
-        )
-
-        # Only three action buttons
+        # Buttons
         button_frame = ttk.Frame(self.root)
         button_frame.pack(fill="x", padx=15, pady=10)
 
@@ -153,6 +112,39 @@ class ScholarshipExtractor:
         )
         self.status.pack(fill="x", side="bottom")
 
+    def extract_root_domain(self, url):
+
+        if not url:
+            return None
+
+        try:
+            if not url.startswith(("http://", "https://")):
+                url = "https://" + url
+
+            hostname = urlparse(url).hostname
+
+            if not hostname:
+                return None
+
+            hostname = hostname.lower().rstrip(".")
+
+            if hostname.startswith("www."):
+                hostname = hostname[4:]
+
+            # Return the registered root domain.
+            # Handles common multi-part suffixes such as .co.uk.
+            import tldextract
+
+            extracted = tldextract.extract(hostname)
+
+            if extracted.domain and extracted.suffix:
+                return f"{extracted.domain}.{extracted.suffix}"
+
+            return hostname
+
+        except Exception:
+            return None
+
     def load_json(self):
 
         try:
@@ -164,27 +156,29 @@ class ScholarshipExtractor:
                     "JSON must contain a list of scholarships."
                 )
 
-            self.scholarships = []
+            unique_domains = set()
 
             for item in data:
 
                 if not isinstance(item, dict):
                     continue
 
-                self.scholarships.append({
-                    "name": item.get("name", ""),
-                    "applicationUrl": item.get(
-                        "applicationUrl", ""
-                    )
-                })
+                domain = self.extract_root_domain(
+                    item.get("applicationUrl", "")
+                )
+
+                if domain:
+                    unique_domains.add(domain)
+
+            self.domains = sorted(unique_domains)
 
             self.search_var.set("")
-            self.filtered_scholarships = self.scholarships.copy()
+            self.filtered_domains = self.domains.copy()
 
             self.populate_table()
 
             self.status.config(
-                text=f"Loaded {len(self.scholarships)} scholarships."
+                text=f"Found {len(self.domains)} unique root domains."
             )
 
         except FileNotFoundError:
@@ -209,95 +203,60 @@ class ScholarshipExtractor:
 
         self.tree.delete(*self.tree.get_children())
 
-        for index, scholarship in enumerate(
-            self.filtered_scholarships
-        ):
-
+        for domain in self.filtered_domains:
             self.tree.insert(
                 "",
                 "end",
-                iid=str(index),
-                values=(
-                    scholarship["name"],
-                    scholarship["applicationUrl"]
-                )
+                values=(domain,)
             )
 
         self.status.config(
-            text=f"Showing {len(self.filtered_scholarships)} "
-                 f"of {len(self.scholarships)} scholarships."
+            text=f"Showing {len(self.filtered_domains)} "
+                 f"of {len(self.domains)} root domains."
         )
 
-    def search_scholarships(self, *args):
+    def search_domains(self, *args):
 
         query = self.search_var.get().lower().strip()
 
-        self.filtered_scholarships = [
-            scholarship
-            for scholarship in self.scholarships
-            if query in scholarship["name"].lower()
-            or query in scholarship["applicationUrl"].lower()
+        self.filtered_domains = [
+            domain
+            for domain in self.domains
+            if query in domain.lower()
         ]
 
         self.populate_table()
 
-    def display_selected(self, event=None):
-
-        selected = self.tree.selection()
-
-        self.text_display.delete("1.0", tk.END)
-
-        for item_id in selected:
-
-            scholarship = self.filtered_scholarships[
-                int(item_id)
-            ]
-
-            self.text_display.insert(
-                tk.END,
-                f"Name: {scholarship['name']}\n"
-                f"Link: {scholarship['applicationUrl']}\n\n"
-            )
-
     def copy_all(self):
 
-        if not self.scholarships:
+        if not self.domains:
             messagebox.showwarning(
                 "No Data",
-                "There are no scholarships to copy."
+                "There are no domains to copy."
             )
             return
 
-        lines = []
-
-        for scholarship in self.scholarships:
-
-            lines.append(
-                f"{scholarship['name']}\t"
-                f"{scholarship['applicationUrl']}"
-            )
-
         self.root.clipboard_clear()
-        self.root.clipboard_append("\n".join(lines))
+        self.root.clipboard_append("\n".join(self.domains))
         self.root.update()
 
         self.status.config(
-            text=f"Copied {len(self.scholarships)} scholarships!"
+            text=f"Copied {len(self.domains)} root domains!"
         )
 
     def export_csv(self):
 
-        if not self.scholarships:
+        if not self.domains:
             messagebox.showwarning(
                 "No Data",
-                "There are no scholarships to export."
+                "There are no domains to export."
             )
             return
 
         filename = filedialog.asksaveasfilename(
             defaultextension=".csv",
             filetypes=[("CSV Files", "*.csv")],
-            initialfile="scholarship_links.csv"
+            initialfile="root_domains.csv"
         )
 
         if not filename:
@@ -312,17 +271,15 @@ class ScholarshipExtractor:
                 encoding="utf-8-sig"
             ) as file:
 
-                writer = csv.DictWriter(
-                    file,
-                    fieldnames=["name", "applicationUrl"]
-                )
+                writer = csv.writer(file)
+                writer.writerow(["Root Domain"])
 
-                writer.writeheader()
-                writer.writerows(self.scholarships)
+                for domain in self.domains:
+                    writer.writerow([domain])
 
             messagebox.showinfo(
                 "Export Successful",
-                f"Exported {len(self.scholarships)} scholarships!\n\n"
+                f"Exported {len(self.domains)} root domains!\n\n"
                 f"Saved to:\n{filename}"
             )
 
@@ -343,4 +300,3 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = ScholarshipExtractor(root)
     root.mainloop()
-
